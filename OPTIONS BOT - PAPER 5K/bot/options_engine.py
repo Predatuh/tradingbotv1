@@ -2,9 +2,10 @@
 
 The logic per cycle:
   1. Evaluate the signal on each UNDERLYING (same model as the stock bot).
-  2. Very bullish  -> buy a near-the-money CALL, 7-21 days out.
-     Very bearish  -> buy a near-the-money PUT (options can profit on the
-     way down without shorting).
+  2. Live trend still going up   -> buy a near-the-money CALL, 7-21 days out.
+     Live trend still going down -> buy a near-the-money PUT.
+     Direction is the last ~60 minutes, not the 200-bar EMA. If that move
+     has already turned, do not buy the old side.
   3. Manage each open contract on the PREMIUM, not the stock price:
        +profit_target_pct  -> take profit
        -stop_pct           -> cut it
@@ -281,8 +282,10 @@ class OptionsEngine:
 
     def _think(self, und, sig, is_open: bool) -> str:
         """One honest sentence: what the bot sees on this symbol RIGHT NOW."""
-        c = float(sig.composite); need = self.call_score
-        trend = "UP" if sig.regime > 0 else ("DOWN" if sig.regime < 0 else "flat")
+        c = float(sig.composite)
+        impulse = int(getattr(sig, "impulse", 0) or 0)
+        reversing = bool(getattr(sig, "reversing", 0))
+        trend = "UP" if impulse > 0 else ("DOWN" if impulse < 0 else "flat")
         held = self._held_for(und)
         if held:
             b = self.book.get(held[0], {})
@@ -290,9 +293,9 @@ class OptionsEngine:
                 return ("broker rejected the auto-buy — sent you a BUY-IT-YOURSELF "
                         "signal; it clears on its own if you don't take it")
             return (f"holding the {(b.get('type') or '').upper()} — managing it, "
-                    f"not adding; score {c:+.2f}, trend {trend}")
+                    f"not adding; live trend {trend}, score {c:+.2f}")
         if not is_open:
-            return f"market closed — watching only; last score {c:+.2f}, trend {trend}"
+            return f"market closed — watching only; live trend {trend}, score {c:+.2f}"
         if getattr(self, "_dl_locked", False):
             return "day's profit is locked in — done buying until tomorrow"
         if self.entry_cutoff_utc and datetime.now(timezone.utc).hour >= self.entry_cutoff_utc:
@@ -301,23 +304,19 @@ class OptionsEngine:
         bl = self.block.get(und)
         if bl:
             return "won't buy: " + bl
-        if c >= need and sig.regime > 0:
-            return (f"score {c:+.2f} clears the +{need:.2f} bar and the trend is UP "
-                    f"— lining up a CALL")
-        if c <= -need and sig.regime < 0:
-            return (f"score {c:+.2f} clears the -{need:.2f} bar and the trend is DOWN "
-                    f"— lining up a PUT")
-        if c >= need and sig.regime <= 0:
-            return (f"bullish score {c:+.2f} but the trend is {trend} — waiting for "
-                    f"the trend to turn UP before it will buy a call")
-        if c <= -need and sig.regime >= 0:
-            return (f"bearish score {c:+.2f} but the trend is {trend} — waiting for "
-                    f"a real downtrend before it will buy a put")
-        gap = need - abs(c)
-        lean = ("leaning bullish" if c > 0.03 else
-                "leaning bearish" if c < -0.03 else "no lean either way")
-        return (f"score {c:+.2f} ({lean}), trend {trend} — needs {gap:.2f} more "
-                f"conviction to hit the ±{need:.2f} entry bar, so it waits")
+        if reversing:
+            side = "CALL" if impulse > 0 else "PUT"
+            return (f"the {trend} move just turned — not buying the old {side}")
+        if impulse > 0:
+            return ("live trend is UP over the last hour — lining up a CALL "
+                    "(not waiting for the 200-bar average)")
+        if impulse < 0:
+            return ("live trend is DOWN over the last hour — lining up a PUT "
+                    "(not waiting for the 200-bar average)")
+        regime = "UP" if sig.regime > 0 else "DOWN"
+        return (f"no live trend in the last hour — waiting, not buying the old "
+                f"{regime} regime just because price is still on that side of "
+                f"the 200-bar average")
 
     def _exit_story(self, reason: str, pnl_pct: float, entry: float,
                     current: float, peak_gain: float, held_min: float) -> str:
@@ -535,8 +534,8 @@ class OptionsEngine:
             spot = sig.get("price")
             if not spot:
                 continue
-            # show the side the bot leans toward: uptrend -> call, downtrend -> put
-            direction = "call" if (sig.get("regime", 0) or 0) >= 0 else "put"
+            # quote the side the live hour is actually moving, not the 200-bar regime
+            direction = "put" if (sig.get("impulse", 0) or 0) < 0 else "call"
             prev = self.candidates.get(und) or {}
             # re-use the chosen contract for 15 min; only re-quote it in between
             reuse = (prev.get("symbol") and prev.get("type") == direction
@@ -633,19 +632,23 @@ class OptionsEngine:
             return                                   # one contract per underlying
         direction = forced
         if not direction:
-            if sig.composite >= self.call_score and sig.regime > 0:
+            # Trade the move that is happening now (last ~60 min). The old
+            # rule waited for a score extreme AND the 200-bar EMA, so it sat
+            # through the trend and bought that same side after it turned.
+            impulse = int(getattr(sig, "impulse", 0) or 0)
+            reversing = bool(getattr(sig, "reversing", 0))
+            if reversing and impulse != 0:
+                side = "CALL" if impulse > 0 else "PUT"
+                way = "up" if impulse > 0 else "down"
+                self.block[und] = (f"the {way} move just turned — not buying "
+                                   f"the old {side}")
+                return
+            if impulse > 0:
                 direction = "call"
-            elif sig.composite <= self.put_score and sig.regime < 0:
-                direction = "put"                    # bearish + downtrend -> put
+            elif impulse < 0:
+                direction = "put"
         if not direction:
-            if sig.composite >= self.call_score and sig.regime <= 0:
-                self.block[und] = ("score says CALL but the trend is DOWN — "
-                                   "won't buy calls into a downtrend")
-            elif sig.composite <= self.put_score and sig.regime >= 0:
-                self.block[und] = ("score says PUT but the trend is UP — "
-                                   "won't buy puts into an uptrend")
-            else:
-                self.block[und] = ""       # simply below the bar: normal waiting
+            self.block[und] = ""           # last hour is flat: nothing to trade
             return
         if forced:
             self._event(f"MANUAL BUY: you clicked Buy {direction.upper()} on {und} — "
@@ -744,8 +747,9 @@ class OptionsEngine:
                              f"Observe mode: no money moved. The bot would have "
                              f"bought {contracts} contract(s) at ~${pick.mid:.2f}/share "
                              f"(${pick.mid*100*contracts:,.0f}), exp {pick.expiry}, "
-                             f"because the score {sig.composite:+.2f} cleared its "
-                             f"\u00b1{self.call_score:.2f} bar with the trend behind it. "
+                             f"because the last hour is still "
+                             f"{'up' if direction == 'call' else 'down'} — "
+                             f"bought the live move, not the lagging 200-bar trend. "
                              f"Plan would be: take profit ${plan_tp}, bail ${plan_stop}.")
             return
         if self.alert_only:
@@ -827,12 +831,12 @@ class OptionsEngine:
             self._save_book()
             self._event(f"BUY {direction.upper()} {und} {pick.symbol} x{contracts} "
                         f"@~${pick.mid:.2f} (score {sig.composite:+.2f})")
-            trend_w = "UP" if sig.regime > 0 else ("DOWN" if sig.regime < 0 else "flat")
+            live = "UP" if int(getattr(sig, "impulse", 0) or 0) > 0 else (
+                "DOWN" if int(getattr(sig, "impulse", 0) or 0) < 0 else "flat")
             why = (f"You tapped Buy on the app — signal checks skipped, sized by the "
                    f"normal premium cap." if forced else
-                   f"Signal score {sig.composite:+.2f} cleared the "
-                   f"\u00b1{self.call_score:.2f} bar with the trend {trend_w} — "
-                   f"exactly the setup it hunts for.")
+                   f"The last hour is still {live}, so it bought that side. "
+                   f"It no longer waits for the 200-bar average or a score extreme.")
             self._notice("buy", pick.symbol,
                          f"BUYING {und} {direction.upper()} ${pick.strike:g} "
                          f"\u00b7 ${pick.mid:.2f}",
@@ -923,9 +927,12 @@ class OptionsEngine:
             except Exception:
                 dte = 99
             sig = self.last_signals.get(b["underlying"], {})
-            comp = sig.get("composite", 0.0)
-            flipped = (b["type"] == "call" and comp < -0.05) or \
-                      (b["type"] == "put" and comp > 0.05)
+            # Close only when the live hour has turned, not when the score
+            # fades. The old composite check sold calls on a dip reading
+            # while the move was still intact.
+            impulse = int(sig.get("impulse", 0) or 0)
+            flipped = (b["type"] == "call" and impulse < 0) or \
+                      (b["type"] == "put" and impulse > 0)
             if b.get("manual_entry"):
                 flipped = False   # your Buy click overrode the signal — don't insta-exit on it
 
