@@ -6,8 +6,11 @@ their weighted sum. v2 changes, driven by real-market backtest results:
   * All signals are computed VECTORIZED over the whole history at once
     (evaluate_all), so backtesting/tuning is ~100x faster. The live engine
     uses the same code path via evaluate() — one implementation, no drift.
-  * A hard REGIME GATE: longs only when price is above its 200-bar EMA,
-    shorts only below. The ensemble votes, but it can't fight the tide.
+  * A hard REGIME GATE still exists for the stock bot: longs only when price
+    is above its 200-bar EMA, shorts only below. The options bot does NOT use
+    that gate for entries — a 200-bar EMA lags for days and was buying the
+    old trend after it had already turned.
+  * Options entries use `impulse` / `reversing` instead: the last ~60 minutes.
   * The old "signal fade" exit closed winners the moment enthusiasm dipped;
     the exit threshold now defaults below zero so a position is only closed
     early when the ensemble actually turns against it. The trailing stop is
@@ -23,13 +26,35 @@ import pandas as pd
 from . import indicators as ta
 
 
+def live_move(close: pd.Series, atr: pd.Series) -> tuple[pd.Series, pd.Series]:
+    """Direction of the move happening now, plus a 'it already turned' flag.
+
+    The 200-bar regime stays up for days after a rally has failed. This looks
+    at the last two bars (~60 minutes on the 30-minute feed) so a live push
+    is visible while it is still going, and marks it reversing once the
+    latest bar has already given the move back.
+    """
+    move2 = close - close.shift(2)
+    move1 = close - close.shift(1)
+    fast = ta.ema(close, 8)
+    slope = fast - fast.shift(2)
+    thresh = (0.20 * atr).clip(lower=close.abs() * 0.0008)
+    up = (move2 > thresh) & (slope > 0)
+    down = (move2 < -thresh) & (slope < 0)
+    impulse = pd.Series(np.where(up, 1, np.where(down, -1, 0)), index=close.index)
+    reversing = ((impulse == 1) & (move1 < -thresh)) | ((impulse == -1) & (move1 > thresh))
+    return impulse.fillna(0).astype(int), reversing.fillna(False).astype(int)
+
+
 @dataclass
 class Signal:
     composite: float
     parts: dict = field(default_factory=dict)
     atr: float = 0.0
     price: float = 0.0
-    regime: int = 0          # +1 above 200-EMA, -1 below
+    regime: int = 0          # +1 above 200-EMA, -1 below (lagging; stock bot only)
+    impulse: int = 0         # +1 live up move, -1 live down move, 0 no move
+    reversing: int = 0       # 1 = latest bar already turned against impulse
 
     def to_dict(self) -> dict:
         return {
@@ -38,6 +63,8 @@ class Signal:
             "atr": round(self.atr, 6),
             "price": round(self.price, 6),
             "regime": self.regime,
+            "impulse": int(self.impulse),
+            "reversing": int(self.reversing),
         }
 
 
@@ -112,6 +139,9 @@ class MultiSignalStrategy:
         out["price"] = close
         ema200 = ta.ema(close, 200)
         out["regime"] = np.where(close >= ema200, 1, -1)
+        impulse, reversing = live_move(close, a)
+        out["impulse"] = impulse
+        out["reversing"] = reversing
         # not enough history -> neutral
         warm = min(len(df), 60)
         out.iloc[:warm, out.columns.get_loc("composite")] = 0.0
@@ -129,10 +159,12 @@ class MultiSignalStrategy:
     def signal_from_row(row) -> Signal:
         return Signal(
             composite=float(row["composite"]),
-            parts={k: float(row[k]) for k in PART_KEYS},
+            parts={k: float(row[k]) for k in PART_KEYS if k in row},
             atr=float(row["atr"]) if row["atr"] == row["atr"] else 0.0,
             price=float(row["price"]),
-            regime=int(row["regime"]),
+            regime=int(row["regime"]) if "regime" in row else 0,
+            impulse=int(row["impulse"]) if "impulse" in row else 0,
+            reversing=int(row["reversing"]) if "reversing" in row else 0,
         )
 
     # ---------- decisions ----------
@@ -161,7 +193,9 @@ class MLStrategy(MultiSignalStrategy):
     (ml_entry_prob / ml_exit_prob) and mapped onto the same score scale, so
     the engine, backtester, and dashboard need no special cases. The regime
     filter and all risk management still apply — the model proposes, the
-    risk manager disposes.
+    risk manager disposes. Options entries ignore this score and use the
+    live-move impulse instead; the model was buying the dip after the move
+    had already failed.
     """
 
     def __init__(self, cfg: dict, model, meta: dict):
@@ -187,6 +221,9 @@ class MLStrategy(MultiSignalStrategy):
         out["price"] = df["close"]
         ema200 = ta.ema(df["close"], 200)
         out["regime"] = np.where(df["close"] >= ema200, 1, -1)
+        impulse, reversing = live_move(df["close"], out["atr"])
+        out["impulse"] = impulse
+        out["reversing"] = reversing
         for k in PART_KEYS:            # keep schema identical for the engine/dashboard
             out[k] = 0.0
         out.loc[~valid, "composite"] = 0.0
