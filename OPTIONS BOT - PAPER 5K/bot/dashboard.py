@@ -117,7 +117,7 @@ def chart():
             try:
                 sig = (getattr(ENGINE, "last_signals", {}) or {}).get(watch) or {}
                 spot = sig.get("price")
-                direction = "call" if (sig.get("regime", 0) or 0) >= 0 else "put"
+                direction = "put" if (sig.get("impulse", 0) or 0) < 0 else "call"
                 if spot and hasattr(ENGINE.broker, "peek_contract"):
                     got = ENGINE.broker.peek_contract(
                         watch, direction, float(spot),
