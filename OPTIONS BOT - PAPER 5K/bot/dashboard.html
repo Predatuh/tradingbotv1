@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trading Bot — Live</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --page:        #0d0d0d;
+    --surface-1:   #1a1a19;
+    --text-primary:#ffffff;
+    --text-secondary:#c3c2b7;
+    --muted:       #898781;
+    --grid:        #2c2c2a;
+    --baseline:    #383835;
+    --border:      rgba(255,255,255,0.10);
+    --series-1:    #3987e5;   /* blue — bullish pole */
+    --div-neg:     #e66767;   /* red — bearish pole */
+    --div-mid:     #383835;
+    --good:        #0ca30c;
+    --warning:     #fab219;
+    --critical:    #d03b3b;
+    --good-wash:     rgba(12,163,12,.10);
+    --critical-wash: rgba(208,59,59,.10);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page); color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 24px; max-width: 1180px; margin: 0 auto;
+  }
+  header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+  h1 { font-size: 17px; font-weight: 600; }
+  .badge {
+    font-size: 11px; font-weight: 600; letter-spacing: .06em;
+    padding: 3px 9px; border-radius: 20px; border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .badge.paper { color: var(--warning); border-color: rgba(250,178,25,.35); }
+  .badge.open  { color: var(--good); border-color: rgba(12,163,12,.35); }
+  .badge.halted{ color: var(--critical); border-color: rgba(208,59,59,.4); }
+  .stamp { font-size: 12px; color: var(--muted); margin-left: auto; }
+
+  /* ---- the big verdict banner ---- */
+  .verdict {
+    display: flex; align-items: center; gap: 18px;
+    border-radius: 14px; padding: 22px 26px; margin-bottom: 14px;
+    background: var(--surface-1); border: 1px solid var(--border);
+  }
+  .verdict.up   { background: linear-gradient(var(--good-wash), var(--good-wash)), var(--surface-1); border-color: rgba(12,163,12,.35); }
+  .verdict.down { background: linear-gradient(var(--critical-wash), var(--critical-wash)), var(--surface-1); border-color: rgba(208,59,59,.35); }
+  .verdict .arrow { font-size: 42px; line-height: 1; }
+  .verdict.up .arrow { color: var(--good); }
+  .verdict.down .arrow { color: var(--critical); }
+  .verdict .headline { font-size: 26px; font-weight: 700; }
+  .verdict.up .headline { color: var(--good); }
+  .verdict.down .headline { color: var(--critical); }
+  .verdict .sub { font-size: 13.5px; color: var(--text-secondary); margin-top: 3px; }
+  .verdict .right { margin-left: auto; text-align: right; }
+  .verdict .right .eq { font-size: 34px; font-weight: 600; }
+  .verdict .right .lbl { font-size: 12px; color: var(--text-secondary); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 6px; }
+  .card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .tile .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+  .tile .value { font-size: 28px; font-weight: 600; }
+  .tile .delta { font-size: 13px; margin-top: 4px; color: var(--text-secondary); }
+  .up-text   { color: var(--good); }
+  .down-text { color: var(--critical); }
+
+  h2 { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin: 22px 0 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12px;
+       padding: 6px 10px; border-bottom: 1px solid var(--baseline); }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  td.sym { font-weight: 600; font-variant-numeric: normal; }
+  tr.winrow td { background: var(--good-wash); }
+  tr.loserow td { background: var(--critical-wash); }
+  .plbig { font-weight: 700; }
+
+  .sigbar { display: flex; align-items: center; gap: 8px; min-width: 190px; }
+  .track { position: relative; flex: 1; height: 10px; background: var(--div-mid); border-radius: 4px; }
+  .track .mid { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); }
+  .fill { position: absolute; top: 0; bottom: 0; }
+  .fill.bull { left: 50%; background: var(--series-1); border-radius: 0 4px 4px 0; }
+  .fill.bear { right: 50%; background: var(--div-neg); border-radius: 4px 0 0 4px; }
+  .sigval { width: 86px; text-align: right; font-variant-numeric: tabular-nums; color: var(--text-secondary); font-size: 12px; }
+  .sigword { font-size: 11px; font-weight: 600; letter-spacing: .04em; }
+  .sigword.buy  { color: var(--series-1); }
+  .sigword.sell { color: var(--div-neg); }
+  .sigword.wait { color: var(--muted); font-weight: 500; }
+
+  .buybtn { background: #0e5c2f; color: #fff; border: 1px solid #17944a; border-radius: 6px;
+            padding: 3px 10px; font-size: 11px; cursor: pointer; font-weight: 600; }
+  .buybtn.put { background: #7a2222; border-color: #a33; }
+  .sellbtn { background: #7a2222; color: #fff; border: 1px solid #a33; border-radius: 6px;
+             padding: 3px 10px; font-size: 11px; cursor: pointer; }
+  .mchart { display: flex; align-items: center; gap: 8px; cursor: zoom-in; }
+  .mchart:hover svg { outline: 1px solid var(--series-1); outline-offset: 2px; border-radius: 3px; }
+
+  /* ---- big interactive chart ---- */
+  #bigWrap { position: fixed; inset: 0; z-index: 9500; background: rgba(0,0,0,.86);
+             backdrop-filter: blur(4px); display: none; align-items: center;
+             justify-content: center; padding: 22px; }
+  #bigWrap.on { display: flex; }
+  #bigBox { background: var(--surface-1); border: 1px solid var(--border); border-radius: 14px;
+            width: min(1500px, 96vw); height: min(880px, 92vh); display: flex; flex-direction: column;
+            padding: 16px 20px 14px; }
+  #bigHead { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  #bigHead .t1 { font-size: 17px; font-weight: 700; }
+  #bigHead .t2 { font-size: 12px; color: var(--muted); }
+  #bigPx { font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  #bigChg { font-size: 14px; font-weight: 600; }
+  .tabs { display: flex; gap: 6px; }
+  .tab { background: transparent; color: var(--text-secondary); border: 1px solid var(--border);
+         border-radius: 7px; padding: 5px 12px; font-size: 12px; cursor: pointer; }
+  .tab.sel { background: var(--series-1); border-color: var(--series-1); color: #fff; font-weight: 600; }
+  #bigSvgWrap { flex: 1; margin-top: 12px; position: relative; min-height: 0; }
+  #bigSvg { width: 100%; height: 100%; display: block; cursor: crosshair; }
+  #bigTip { position: absolute; pointer-events: none; background: #000; border: 1px solid var(--border);
+            border-radius: 7px; padding: 7px 10px; font-size: 12px; line-height: 1.5;
+            display: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  #bigFoot { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  #bigFoot .legend { font-size: 11.5px; color: var(--muted); margin-right: auto; }
+  .lgd { display: inline-flex; align-items: center; gap: 5px; margin-right: 14px; }
+  .lgd i { width: 15px; height: 0; border-top: 2px dashed currentColor; display: inline-block; }
+  .bigbtn { border-radius: 8px; padding: 9px 20px; font-size: 13px; font-weight: 700; cursor: pointer;
+            border: 1px solid; }
+  .bigbtn.buy  { background: #0e5c2f; border-color: #17944a; color: #fff; }
+  .bigbtn.put  { background: #7a2222; border-color: #a33; color: #fff; }
+  .bigbtn.sell { background: #7a2222; border-color: #a33; color: #fff; }
+  .bigbtn.close{ background: transparent; border-color: var(--border); color: var(--text-secondary); }
+  .mchart .mnum { font-size: 11px; line-height: 1.35; font-variant-numeric: tabular-nums;
+                  white-space: nowrap; }
+
+  .events { list-style: none; font-size: 12.5px; }
+  .events li { padding: 5px 0; border-bottom: 1px solid var(--grid); color: var(--text-secondary); }
+  .events .t { color: var(--muted); margin-right: 10px; font-variant-numeric: tabular-nums; }
+  .empty { color: var(--muted); font-size: 13px; padding: 14px 4px; }
+  .footnote { margin-top: 26px; font-size: 11.5px; color: var(--muted); }
+  .stale { opacity: .55; transition: opacity .3s; }
+  details.raw { margin-top: 10px; } details.raw summary { font-size: 12px; color: var(--muted); cursor: pointer; }
+</style>
+</head>
+<body>
+
+<!-- ============ RISK ACKNOWLEDGMENT GATE (shows on every page load) ============ -->
+<div id="riskGate" style="position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.88);
+     backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:20px">
+  <div id="gateBox" style="max-width:640px;background:#141414;border:2px solid #d03b3b;
+       border-radius:12px;padding:28px 32px;box-shadow:0 0 60px rgba(208,59,59,.25)">
+    <div id="gateTitle" style="font-size:22px;font-weight:800;color:#e05555;letter-spacing:.5px">
+      ⚠ REAL-MONEY TRADING WARNING</div>
+    <div id="gateBody" style="font-size:13.5px;line-height:1.65;color:#d8d8d8;margin-top:14px">
+      Loading account mode…</div>
+    <button id="gateBtn" onclick="try{localStorage.setItem('risk_ack','1')}catch(e){};document.getElementById('riskGate').remove()"
+       style="margin-top:22px;width:100%;padding:13px;font-size:14px;font-weight:800;
+       letter-spacing:.5px;background:#7a2222;color:#fff;border:1px solid #d03b3b;
+       border-radius:8px;cursor:pointer">
+      ACKNOWLEDGE — I ACCEPT FULL RESPONSIBILITY</button>
+  </div>
+</div>
+<script>
+/* ==== EDIT YOUR WARNING TEXT HERE ==== */
+const GATE_REAL_TITLE = "⚠ CAUTION: THIS SOFTWARE IS TRADING REAL FUNDS";
+const GATE_REAL_BODY =
+  "This dashboard controls an automated trading system that is <b>actively placing " +
+  "orders with real money</b> in a live brokerage account.<br><br>" +
+  "By clicking ACKNOWLEDGE below, you confirm and agree that: (1) you are the " +
+  "authorized owner of the connected brokerage account; (2) every trade, gain, and " +
+  "loss produced by this software is <b>solely your own responsibility</b>; and " +
+  "(3) the creator of this software assumes <b>no liability or responsibility " +
+  "whatsoever</b> for lost funds, software errors, missed or delayed trades, or any " +
+  "other damages arising from its use.<br><br>" +
+  "Automated trading can lose money rapidly. This software is provided \"as is\", " +
+  "without warranty of any kind. Nothing in this software constitutes financial advice.";
+const GATE_PAPER_TITLE = "⚠ PAPER ACCOUNT — SIMULATED FUNDS";
+const GATE_PAPER_BODY =
+  "This copy of the dashboard is connected to a <b>paper (simulated) account</b> — " +
+  "no real money is at risk on this page.<br><br>" +
+  "The same terms apply for testing purposes: all activity produced by this software " +
+  "is solely your own responsibility, and the creator assumes no liability of any " +
+  "kind. This software is provided \"as is\" and is not financial advice.";
+/* ==== END EDITABLE TEXT ==== */
+// acknowledged once before? don't ask again on every open / bot switch
+try { if (localStorage.getItem("risk_ack") === "1")
+        document.getElementById("riskGate").remove(); } catch(e) {}
+fetch("/state").then(r=>r.json()).then(st=>{
+  const isPaper = ((st.mode||"")+"").toUpperCase().includes("PAPER");
+  document.getElementById("gateTitle").innerHTML = isPaper ? GATE_PAPER_TITLE : GATE_REAL_TITLE;
+  document.getElementById("gateBody").innerHTML  = isPaper ? GATE_PAPER_BODY  : GATE_REAL_BODY;
+  if (isPaper){
+    document.getElementById("gateBox").style.borderColor = "#b8860b";
+    document.getElementById("gateBox").style.boxShadow = "0 0 60px rgba(184,134,11,.25)";
+    document.getElementById("gateTitle").style.color = "#fab219";
+  }
+}).catch(()=>{   // if the bot isn't reachable, fail SAFE: show the real-money text
+  document.getElementById("gateTitle").innerHTML = GATE_REAL_TITLE;
+  document.getElementById("gateBody").innerHTML = GATE_REAL_BODY;
+});
+</script>
+<!-- ============ END RISK GATE ============ -->
+
+<header>
+  <h1>Trading Bot</h1>
+  <span id="mode" class="badge paper">PAPER</span>
+  <span id="market" class="badge">—</span>
+  <span id="riskprofile" class="badge" style="display:none"></span>
+  <span id="riskflag" class="badge" style="display:none"></span>
+  <span class="stamp" id="stamp">connecting…</span>
+</header>
+
+<!-- THE one-glance answer -->
+<div class="verdict" id="verdict">
+  <div class="arrow" id="vArrow">•</div>
+  <div>
+    <div class="headline" id="vHead">Starting up…</div>
+    <div class="sub" id="vSub">Waiting for the first engine cycle.</div>
+  </div>
+  <div class="right">
+    <div class="eq" id="equity">—</div>
+    <div class="lbl">account value</div>
+    <svg id="spark" width="220" height="40" viewBox="0 0 220 40" preserveAspectRatio="none"></svg>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card tile">
+    <div class="label">Today</div>
+    <div class="value" id="dayPl">—</div>
+    <div class="delta" id="dayPlPct"></div>
+  </div>
+  <div class="card tile">
+    <div class="label">Open trades — what you'd pocket if you sold right now</div>
+    <div class="value" id="upl">—</div>
+    <div class="delta" id="posdetail"></div>
+  </div>
+  <div class="card tile">
+    <div class="label">Cash ready to trade</div>
+    <div class="value" id="cash">—</div>
+  </div>
+</div>
+
+<h2>Open positions <span style="font-weight:400;color:var(--muted)">(green row = winning, red row = losing)</span></h2>
+<div class="card"><div id="positions"></div></div>
+
+<div id="obsCard" style="display:none">
+<div class="card" id="obsInner" style="display:flex;align-items:center;gap:14px">
+  <div style="flex:1">
+    <b id="obsTitle" style="font-size:14px">Observe only</b>
+    <div id="obsHint" style="font-size:12px;color:var(--muted);margin-top:3px"></div>
+  </div>
+  <button id="obsBtn" onclick="toggleObserve()"
+    style="border:1px solid #444;background:#2a2a28;color:#eee;border-radius:9px;
+           padding:9px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap">
+    Turn ON</button>
+</div>
+</div>
+
+<div id="strictCard" style="display:none">
+<h2>Signal strictness</h2>
+<div class="card">
+  <div style="font-size:12px;color:var(--muted);margin-bottom:8px">
+    The evidence score a market must reach before the bot buys a call (+) or a put (−).
+    Slide it and it applies to the running bot instantly and survives restarts
+    (it overrides config.yaml). Lower bar = more trades — and every trade pays the
+    bid/ask spread, so looser is never free.</div>
+  <div style="display:flex;align-items:center;gap:12px;max-width:560px">
+    <b>Buy at ±</b>
+    <input type="range" id="strictSlider" min="0.10" max="0.30" step="0.01" style="flex:1"
+           oninput="strictPreview()" onchange="strictApply()">
+    <b id="strictVal" style="width:48px;text-align:right">—</b>
+  </div>
+  <div id="strictTxt" style="font-size:12px;margin-top:8px;color:var(--muted)"></div>
+</div>
+</div>
+
+<!-- ============ BIG INTERACTIVE CHART ============ -->
+<div id="bigWrap" onclick="if(event.target===this) closeBig()">
+  <div id="bigBox">
+    <div id="bigHead">
+      <div>
+        <div class="t1" id="bigTitle">—</div>
+        <div class="t2" id="bigSub"></div>
+      </div>
+      <div style="margin-left:auto;text-align:right">
+        <div id="bigPx">—</div>
+        <div id="bigChg"></div>
+      </div>
+      <div class="tabs" id="bigTabs"></div>
+    </div>
+    <div id="bigSvgWrap">
+      <svg id="bigSvg"></svg>
+      <div id="bigTip"></div>
+    </div>
+    <div id="bigFoot">
+      <div class="legend" id="bigLegend"></div>
+      <div id="bigActions"></div>
+      <button class="bigbtn close" onclick="closeBig()">Close (Esc)</button>
+    </div>
+  </div>
+</div>
+
+<h2>What the bot is thinking</h2>
+<div class="card"><div id="signals"></div></div>
+
+<h2>Activity</h2>
+<div class="card"><ul class="events" id="events"><li class="empty">No events yet.</li></ul></div>
+
+<p class="footnote">Page refreshes every 3 seconds; the bot pulls fresh market data every 15
+seconds, so what you see is at most ~15s old. Graph shows recent price action (gray dotted line = start of the window;
+amber dashed line = the price you bought at). <b>Click any graph</b> to open the big
+interactive chart — crosshair, hover readout, your entry/stop/target lines, and Buy/Sell built in.
+Signal meter: blue = evidence to buy, red = evidence to sell; the bot acts when the meter crosses its threshold.
+Buy CALL / Buy PUT / Buy now places a real order sized by your spending cap — the bot then manages the exit for you.</p>
+
+<script>
+const fmtUsd = v => (v==null||isNaN(v)) ? "—" :
+  (v<0?"-":"") + Math.abs(v).toLocaleString("en-US",{style:"currency",currency:"USD",
+    maximumFractionDigits: Math.abs(v)>=1000?0:2}).replace("-","");
+const fmtSigned = v => (v>=0?"+":"-") + fmtUsd(Math.abs(v));
+const fmtPct = v => (v>=0?"+":"") + (100*v).toFixed(2) + "%";
+let equityHist = [];
+
+function drawSpark(svg, values, cls){
+  if (values.length < 2) { svg.innerHTML=""; return; }
+  const min = Math.min(...values), max = Math.max(...values), span = (max-min)||1;
+  const pts = values.map((v,i)=>`${(i/(values.length-1))*220},${36-((v-min)/span)*30}`).join(" ");
+  const col = cls==="down" ? "var(--critical)" : (cls==="up" ? "var(--good)" : "var(--series-1)");
+  svg.innerHTML = `<polyline points="${pts}" fill="none" stroke="${col}"
+     stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+}
+
+/* Yahoo-style live mini-graph: recent closes, green/red by direction, with
+   the latest price and the %-change across the drawn window.
+   entryLine: draws an amber dashed "bought at" line ON the graph (same units
+   as the graph — stock positions). entryText: always prints "in @ price" next
+   to the graph (for options this is the premium you paid, e.g. 2.60, while
+   the graph shows the underlying stock, e.g. 587.32). */
+function miniChart(series, entryLine, entryText, note, click){
+  if (!series || series.length < 2)
+    return "<span style='color:var(--muted);font-size:11px'>chart loading…</span>";
+  let lo = Math.min(...series), hi = Math.max(...series);
+  if (entryLine != null && entryLine > 0){ lo = Math.min(lo, entryLine); hi = Math.max(hi, entryLine); }
+  const span = (hi - lo) || 1;
+  const W = 150, H = 40, y = v => H - 4 - ((v - lo) / span) * (H - 10);
+  const pts = series.map((v,i)=>`${(i/(series.length-1))*W},${y(v)}`).join(" ");
+  const last = series[series.length-1], first = series[0];
+  const up = last >= first, chg = (last - first) / (first || 1);
+  const col = up ? "var(--good)" : "var(--critical)";
+  const fmtP = v => (+v) >= 10 ? (+v).toFixed(2) : (+v).toFixed(3);
+  const entrySvg = (entryLine != null && entryLine > 0)
+    ? `<line x1="0" y1="${y(entryLine)}" x2="${W}" y2="${y(entryLine)}"
+             stroke="var(--warning)" stroke-dasharray="4,3" stroke-width="1.2"/>`
+    : `<line x1="0" y1="${y(first)}" x2="${W}" y2="${y(first)}"
+             stroke="var(--baseline)" stroke-dasharray="3,3" stroke-width="1"/>`;
+  const entryDiv = (entryText != null && entryText > 0)
+    ? `<div style="color:var(--warning)" title="what you bought it at">in @ ${fmtP(entryText)}</div>` : "";
+  const noteDiv = note
+    ? `<div style="color:var(--warning);opacity:.85" title="the stock's price when the bot bought the contract — matches the amber line on the graph">${note}</div>` : "";
+  return `<div class="mchart" ${click ? `onclick="${click}" title="Click to open the big interactive chart"` : ""}>
+    <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="flex:none">
+      ${entrySvg}
+      <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.6"
+                stroke-linejoin="round" stroke-linecap="round"/>
+    </svg>
+    <div class="mnum">
+      <div style="font-weight:600">${fmtP(last)}</div>
+      <div class="${up?'up-text':'down-text'}">${(chg>=0?"+":"")+(100*chg).toFixed(2)}%</div>
+      ${entryDiv}${noteDiv}
+    </div></div>`;
+}
+
+function chartFor(charts, sym){
+  if (!charts) return null;
+  if (charts[sym]) return charts[sym];
+  const k = Object.keys(charts).find(c => c.replace("/","") === (sym||"").replace("/",""));
+  return k ? charts[k] : null;
+}
+
+function sigRow(sym, s, threshold, charts, isOpt, ctl, blocked, cands){
+  const c = s.composite ?? 0;
+  const pct = Math.min(Math.abs(c),1)*50;
+  const fill = c>=0 ? `<div class="fill bull" style="width:${pct}%"></div>`
+                    : `<div class="fill bear" style="width:${pct}%"></div>`;
+  let word, wcls;
+  const why = blocked && blocked[sym];
+  if (c >= threshold)      { word = why ? "WON'T BUY" : "BUYING A CALL"; wcls = why ? "wait" : "buy"; }
+  else if (c <= -threshold){ word = why ? "WON'T BUY" : "BUYING A PUT";  wcls = why ? "wait" : "sell"; }
+  else if (c >= threshold*0.7) { word = "warming up"; wcls = "wait"; }
+  else                     { word = "waiting";      wcls = "wait"; }
+  // when the score clears the bar but something stops the trade, say WHAT
+  const blockTxt = why ? ` <span class="sigword wait" style="color:var(--warning)">· ${why}</span>` : "";
+  const regime = (s.regime === -1 && !why) ? ` <span class="sigword wait" title="below its 200-bar average — bot won't buy">· in a downtrend</span>` : "";
+  const scout = s.parts?.scout
+    ? ` <span class="sigword ${s.parts.scout>0?'buy':'sell'}" title="smart-money scout: insider filings + news">· smart-$ ${s.parts.scout>0?"+":""}${s.parts.scout.toFixed(2)}</span>` : "";
+  // what one contract costs right now (watchlist pricing — you don't own it)
+  const cd = cands && cands[sym];
+  const priceCell = !isOpt ? "" : (cd
+    ? `<td style="white-space:nowrap"><span style="cursor:zoom-in" title="Click for this contract's live premium chart"
+         onclick="openBig('${sym}','${sym}',true,'premium')">
+         <b>$${(+cd.cost).toFixed(0)}</b>
+         <span style="color:var(--muted)"> / contract</span><br>
+         <span style="font-size:11px;color:var(--muted)">${(cd.type||"").toUpperCase()} $${(+cd.strike).toFixed(0)} · ${(+cd.mid).toFixed(2)} · exp ${(cd.expiry||"").slice(5)}</span>
+       </span></td>`
+    : `<td style="color:var(--muted);font-size:11px">pricing…</td>`);
+  const trade = !ctl ? "" : (isOpt
+    ? `<td style="white-space:nowrap"><button class="buybtn" onclick="buyNow('${sym}','call')">Buy CALL</button>
+       <button class="buybtn put" onclick="buyNow('${sym}','put')">Buy PUT</button></td>`
+    : `<td><button class="buybtn" onclick="buyNow('${sym}')">Buy now</button></td>`);
+  return `<tr><td class="sym">${sym}</td>
+    <td>${miniChart(chartFor(charts, sym), null, null, null,
+                    `openBig('${sym}','${sym}',${isOpt},'stock')`)}</td>
+    <td><div class="sigbar"><div class="track"><div class="mid"></div>${fill}</div>
+    <span class="sigval">${(c>=0?"+":"")+c.toFixed(2)}</span></div></td>
+    <td><span class="sigword ${wcls}">${word}</span>${blockTxt}${regime}${scout}</td>${priceCell}${trade}</tr>`;
+}
+
+/* ================= BIG INTERACTIVE CHART ================= */
+let BIG = null;              // {sym, und, view:'premium'|'stock', isOpt}
+let BIGTF = 5;               // chart timeframe in minutes (display only — the
+                             // bot always THINKS on its configured timeframe)
+const fmtT = ts => new Date(ts*1000).toLocaleString("en-US",
+  {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"});
+
+function openBig(sym, und, isOpt, view){
+  BIG = {sym, und, isOpt, view: view || (isOpt ? "premium" : "stock")};
+  BIGDATA = null; BIGVIEW = null;
+  document.getElementById("bigWrap").classList.add("on");
+  drawBig();            // instant draw from cached state...
+  loadBigData(true);    // ...then full candles arrive
+}
+function closeBig(){ BIG = null; document.getElementById("bigWrap").classList.remove("on");
+  document.getElementById("bigTip").style.display = "none"; }
+function setBigView(v){ if (BIG){ BIG.view = v; BIGDATA = null; drawBig(); loadBigData(true); } }
+function setBigTf(m){ BIGTF = m; BIGDATA = null; drawBig(); loadBigData(true); }
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeBig(); });
+
+let BIGDATA = null;          // full OHLCV / premium series from /chart
+let BIGVIEW = null;          // {i0, i1} visible index window — zoom & pan
+let BIGFETCH = 0;
+async function loadBigData(force){
+  if (!BIG) return;
+  // The bot only produces new bars every loop (~15s) — refetching 400 candles
+  // every 3s just burns CPU and spams the log. Price/markers still update from
+  // /state on every 3s tick; the candle data refreshes on this slower beat.
+  const now = Date.now();
+  if (!force && now - BIGFETCH < 12000) return;
+  BIGFETCH = now;
+  const holdingNow = !!((window._st||{}).book||{})[BIG.sym];
+  const q = (BIG.isOpt && BIG.view === "premium")
+    ? (holdingNow ? "contract=" + encodeURIComponent(BIG.sym)
+                  : "watch=" + encodeURIComponent(BIG.und))
+    : "symbol=" + encodeURIComponent(BIG.und) + "&tf=" + BIGTF;
+  try {
+    const d = await fetch("/chart?" + q).then(r => r.json());
+    BIGDATA = d.error ? null : d;
+  } catch(e){ BIGDATA = null; }
+  if (force) BIGVIEW = null;   // reset zoom only when the data source changes
+  drawBig();
+}
+
+function bigSeries(st){
+  if (!BIG) return null;
+  const prem = (st.premium || {})[BIG.sym];
+  const b = (st.book || {})[BIG.sym];
+  if (BIG.isOpt && BIG.view === "premium"){
+    if (!prem || !(prem.p||[]).length) return null;
+    return {vals: prem.p, times: prem.t || [], dec: 2,
+            lines: [["entry", prem.entry, "var(--warning)", "you bought at"],
+                    ["stop",  prem.stop,  "var(--critical)", "bot cuts it here"],
+                    ["tp",    prem.tp,    "var(--good)", "first profit target"]],
+            label: "Contract premium (what you actually own)"};
+  }
+  const vals = chartFor(st.charts, BIG.und);
+  if (!vals || vals.length < 2) return null;
+  const times = chartFor(st.chart_times || {}, BIG.und) || [];
+  const entry = BIG.isOpt ? (b?.und_entry_px) : (b?.entry);
+  const lines = [];
+  if (entry) lines.push(["entry", entry, "var(--warning)",
+                         BIG.isOpt ? "stock price when bot bought" : "you bought at"]);
+  if (BIG.isOpt && prem?.strike) lines.push(["strike", prem.strike, "var(--series-1)",
+      (prem.type === "call" ? "needs to get ABOVE" : "needs to get BELOW") + " this strike"]);
+  if (!BIG.isOpt && b?.stop) lines.push(["stop", b.stop, "var(--critical)", "bot cuts it here"]);
+  if (!BIG.isOpt && b?.tp) lines.push(["tp", b.tp, "var(--good)", "target"]);
+  return {vals, times, dec: 2, lines, label: BIG.und + " stock price (same as TradingView)"};
+}
+
+function drawBig(){
+  const st = window._st; if (!BIG || !st) return;
+  const svg = document.getElementById("bigSvg");
+  const wrap = document.getElementById("bigSvgWrap");
+  const W = Math.max(400, wrap.clientWidth), H = Math.max(220, wrap.clientHeight);
+  const prem = (st.premium || {})[BIG.sym];
+  const b = (st.book || {})[BIG.sym];
+
+  // ---- header / tabs / buttons ----
+  const cand = ((st.candidates||{})[BIG.und]) || null;
+  const info = prem || cand;
+  document.getElementById("bigTitle").textContent =
+    BIG.isOpt ? `${BIG.und} ${(info?.type||"").toUpperCase()} $${info?.strike ?? "\u2014"} \u00b7 exp ${info?.expiry ?? "\u2014"}`
+              : BIG.und;
+  const showTf = !(BIG.isOpt && BIG.view === "premium");
+  document.getElementById("bigTabs").innerHTML =
+    (!BIG.isOpt ? "" :
+      `<button class="tab ${BIG.view==='premium'?'sel':''}" onclick="setBigView('premium')">Option premium</button>
+       <button class="tab ${BIG.view==='stock'?'sel':''}" onclick="setBigView('stock')">Underlying stock</button>`)
+    + (!showTf ? "" :
+      `<span style="width:10px"></span>` +
+      [1,5,15,30].map(m => `<button class="tab ${BIGTF===m?'sel':''}" onclick="setBigTf(${m})">${m}m</button>`).join(""));
+  const holding = !!b, ctl = !!st.config?.controls;
+  const optBot = (st.mode || "").includes("OPTIONS");
+  let acts = "";
+  if (ctl && holding) acts = `<button class="bigbtn sell" onclick="sellNow('${BIG.sym}')">Sell now</button>`;
+  else if (ctl && optBot) acts =
+    `<button class="bigbtn buy" onclick="buyNow('${BIG.und}','call')">Buy CALL</button>
+     <button class="bigbtn put" onclick="buyNow('${BIG.und}','put')">Buy PUT</button>`;
+  else if (ctl) acts = `<button class="bigbtn buy" onclick="buyNow('${BIG.und}')">Buy now</button>`;
+  document.getElementById("bigActions").innerHTML = acts;
+
+  // ---- assemble the series ----
+  const D = BIGDATA;
+  const isPrem = BIG.isOpt && BIG.view === "premium";
+  let o=[], h=[], l=[], c=[], v=[], t=[], candles=false, sub="";
+  if (D && D.kind === "bars"){
+    o=D.o; h=D.h; l=D.l; c=D.c; v=D.v||[]; t=D.t||[]; candles=true;
+    const botTf = st.config?.timeframe_minutes || 30;
+    sub = `${BIG.und} \u00b7 ${D.tf||botTf}-minute candles`
+        + ((D.tf && D.tf !== botTf)
+            ? ` \u00b7 view only \u2014 the bot decides on ${botTf}-minute bars`
+            : ` \u00b7 the same bars the bot decides on`);
+  } else if (D && D.kind === "premium" && (D.o||[]).length > 1 && (D.h||[]).length > 1){
+    // real premium CANDLES from the options data API (works even unowned)
+    o=D.o; h=D.h; l=D.l; c=D.c; v=D.v||[]; t=D.t||[]; candles=true;
+    sub = D.watch_only
+      ? `Contract premium candles \u2014 WATCHING ONLY, you don't own this (\u2248$${((c||[]).slice(-1)[0]*100||0).toFixed(0)} per contract)`
+      : "Contract premium candles \u2014 real exchange bars for your contract";
+  } else if (D && D.kind === "premium" && (D.p||[]).length > 1){
+    c=D.p; o=c; h=c; l=c; t=D.t||[];
+    sub = D.watch_only
+      ? `Contract premium \u2014 WATCHING ONLY, you don't own this (\u2248$${((D.p||[]).slice(-1)[0]*100||0).toFixed(0)} per contract)`
+      : "Contract premium \u2014 what you actually own (quote midpoint, not exchange candles)";
+  } else {                                   // fall back to the small state series
+    const vals = isPrem ? (prem?.p||[]) : (chartFor(st.charts, BIG.und)||[]);
+    c=vals; o=vals; h=vals; l=vals;
+    t = isPrem ? (prem?.t||[]) : (chartFor(st.chart_times||{}, BIG.und)||[]);
+    sub = isPrem ? "Contract premium (history builds as the bot runs)"
+                 : BIG.und + " price";
+  }
+  document.getElementById("bigSub").textContent = sub;
+
+  const N = c.length;
+  if (N < 2){
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.innerHTML = `<text x="${W/2}" y="${H/2}" fill="#898781" font-size="13" text-anchor="middle">`
+      + `No price history yet \u2014 it builds as the bot runs.</text>`;
+    document.getElementById("bigPx").textContent = "\u2014";
+    document.getElementById("bigChg").textContent = "";
+    document.getElementById("bigLegend").innerHTML = "";
+    svg._geo = null;
+    return;
+  }
+
+  // ---- visible window (zoom / pan) ----
+  if (!BIGVIEW || BIGVIEW.n !== N){
+    const show = Math.min(N, candles ? 90 : N);
+    BIGVIEW = {i0: N - show, i1: N - 1, n: N};
+  }
+  let {i0, i1} = BIGVIEW;
+  i0 = Math.max(0, Math.min(i0, N - 2)); i1 = Math.min(N - 1, Math.max(i1, i0 + 1));
+  const M = i1 - i0 + 1;
+
+  // ---- marker lines ----
+  const f = x => (+x).toFixed(2);
+  const lines = [];
+  if (isPrem && !(D && D.watch_only)){
+    const e = prem?.entry ?? D?.entry;
+    if (e) lines.push(["entry", e, "var(--warning)", "you bought at"]);
+    if (prem?.stop) lines.push(["stop", prem.stop, "var(--critical)", "bot cuts it here"]);
+    if (prem?.tp)   lines.push(["tp", prem.tp, "var(--good)", "first profit target"]);
+  } else {
+    const e = BIG.isOpt ? b?.und_entry_px : b?.entry;
+    if (e) lines.push(["entry", e, "var(--warning)",
+                       BIG.isOpt ? "stock price when bot bought" : "you bought at"]);
+    if (BIG.isOpt && prem?.strike) lines.push(["strike", prem.strike, "var(--series-1)",
+        (prem.type === "call" ? "needs to get ABOVE" : "needs to get BELOW") + " this strike"]);
+    if (!BIG.isOpt && b?.stop) lines.push(["stop", b.stop, "var(--critical)", "bot cuts it here"]);
+    if (!BIG.isOpt && b?.tp)   lines.push(["tp", b.tp, "var(--good)", "target"]);
+  }
+
+  // ---- geometry ----
+  const volH = candles && v.length === N ? Math.round(H * 0.17) : 0;
+  const PAD = {l: 8, r: 66, t: 14, b: 26};
+  const chartH = H - PAD.t - PAD.b - volH;
+  let pLo = Infinity, pHi = -Infinity;
+  for (let i = i0; i <= i1; i++){ pLo = Math.min(pLo, l[i]); pHi = Math.max(pHi, h[i]); }
+  const pRange = (pHi - pLo) || (pHi * 0.02) || 1;
+  const maxLo = pLo - pRange * 0.9, maxHi = pHi + pRange * 0.9;
+  let lo = pLo, hi = pHi;
+  lines.forEach(L => { const x = L[1];
+    if (!x) return;
+    if (x >= maxLo && x <= maxHi){ lo = Math.min(lo, x); hi = Math.max(hi, x); }
+    else L[4] = x > maxHi ? "above" : "below"; });
+  const pd = (hi - lo) * 0.08 || (hi * 0.01 || 1);
+  lo -= pd; hi += pd;
+  const span = (hi - lo) || 1;
+  const plotW = W - PAD.l - PAD.r;
+  const step = plotW / M;
+  const X = i => PAD.l + (i - i0 + 0.5) * step;
+  const Y = val => PAD.t + (1 - (val - lo) / span) * chartH;
+
+  // ---- readout ----
+  const last = c[N-1], first = c[i0];
+  const up = last >= first, chg = (last - first) / (first || 1);
+  const col = up ? "var(--good)" : "var(--critical)";
+  document.getElementById("bigPx").textContent = f(last);
+  const chgEl = document.getElementById("bigChg");
+  // when you hold it, the number that matters is DOLLARS, not the window %
+  const myPos = (st.positions||[]).find(x => x.symbol === BIG.sym);
+  if (myPos && myPos.unrealized_pl != null){
+    const d = myPos.unrealized_pl;
+    chgEl.innerHTML = `<span style="font-size:17px">${d>=0?"UP ":"DOWN "}${fmtUsd(Math.abs(d))}</span>`
+      + `<span style="color:var(--muted);font-weight:400"> on your position `
+      + `(${fmtPct(myPos.unrealized_plpc)}) \u00b7 ${chg>=0?"+":""}${(100*chg).toFixed(2)}% this view</span>`;
+    chgEl.className = d >= 0 ? "up-text" : "down-text";
+  } else {
+    chgEl.textContent = `${chg>=0?"+":""}${(100*chg).toFixed(2)}% over this view`;
+    chgEl.className = up ? "up-text" : "down-text";
+  }
+
+  // ---- grid + price axis ----
+  let g = "";
+  for (let k = 0; k <= 5; k++){
+    const val = lo + span * k / 5, y = Y(val);
+    g += `<line x1="${PAD.l}" y1="${y}" x2="${W-PAD.r}" y2="${y}" stroke="var(--grid)" stroke-width="1"/>`
+       + `<text x="${W-PAD.r+8}" y="${y+4}" fill="#898781" font-size="11">${f(val)}</text>`;
+  }
+  // ---- time axis ----
+  let tax = "";
+  if (t.length === N){
+    const ticks = Math.min(6, M);
+    const seen = new Set();
+    for (let k = 0; k < ticks; k++){
+      const idx = i0 + Math.round(k * (M-1) / Math.max(1, ticks-1));
+      const lbl = new Date(t[idx]*1000).toLocaleString("en-US",
+        {month:"numeric",day:"numeric",hour:"numeric",minute:"2-digit"});
+      if (seen.has(lbl)) continue;          // don't print the same time twice
+      seen.add(lbl);
+      tax += `<text x="${X(idx)}" y="${H-8}" fill="#898781" font-size="10.5" text-anchor="${
+        k===0?'start':(k===ticks-1?'end':'middle')}">${lbl}</text>`;
+    }
+  }
+  // ---- price body: candles or line ----
+  let body = "";
+  const cw = Math.max(1, Math.min(14, step * 0.68));
+  if (candles && step >= 3){
+    for (let i = i0; i <= i1; i++){
+      const x = X(i), rise = c[i] >= o[i];
+      const cc = rise ? "#0ca30c" : "#d03b3b";
+      const yO = Y(o[i]), yC = Y(c[i]);
+      const top = Math.min(yO, yC), hgt = Math.max(1, Math.abs(yC - yO));
+      body += `<line x1="${x}" y1="${Y(h[i])}" x2="${x}" y2="${Y(l[i])}" stroke="${cc}" stroke-width="1"/>`
+            + `<rect x="${x - cw/2}" y="${top}" width="${cw}" height="${hgt}" fill="${cc}"/>`;
+    }
+  } else {
+    const pts = [];
+    for (let i = i0; i <= i1; i++) pts.push(`${X(i)},${Y(c[i])}`);
+    const gid = up ? "gU" : "gD";
+    body = `<defs><linearGradient id="${gid}" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="${up?'#0ca30c':'#d03b3b'}" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="${up?'#0ca30c':'#d03b3b'}" stop-opacity="0"/>
+      </linearGradient></defs>
+      <polygon points="${X(i0)},${Y(lo)} ${pts.join(" ")} ${X(i1)},${Y(lo)}" fill="url(#${gid})"/>
+      <polyline points="${pts.join(" ")}" fill="none" stroke="${col}" stroke-width="2"
+                stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="${X(i1)}" cy="${Y(c[i1])}" r="3.5" fill="${col}"/>`;
+  }
+  // ---- volume ----
+  let vol = "";
+  if (volH){
+    let vMax = 0;
+    for (let i = i0; i <= i1; i++) vMax = Math.max(vMax, v[i] || 0);
+    const vTop = PAD.t + chartH + 6, vH = volH - 8;
+    for (let i = i0; i <= i1; i++){
+      const hh = vMax ? ((v[i]||0) / vMax) * vH : 0;
+      vol += `<rect x="${X(i) - cw/2}" y="${vTop + vH - hh}" width="${cw}" height="${hh}"
+               fill="${c[i] >= o[i] ? '#0ca30c' : '#d03b3b'}" opacity=".33"/>`;
+    }
+  }
+  // ---- marker lines ----
+  let mk = "";
+  lines.forEach(([key, val, cc, txt, off]) => {
+    if (!val) return;
+    if (off){
+      const y = off === "above" ? PAD.t + 11 : PAD.t + chartH - 4;
+      mk += `<text x="${W-PAD.r-8}" y="${y}" fill="${cc}" font-size="11" font-weight="600"
+              text-anchor="end" opacity=".85">${off==="above"?"\u25b2":"\u25bc"} ${txt} ${f(val)} (off chart)</text>`;
+      return;
+    }
+    mk += `<line x1="${PAD.l}" y1="${Y(val)}" x2="${W-PAD.r}" y2="${Y(val)}" stroke="${cc}"
+            stroke-width="1.4" stroke-dasharray="6,4"/>`
+       + `<text x="${PAD.l+6}" y="${Y(val)-6}" fill="${cc}" font-size="11" font-weight="600">${txt} ${f(val)}</text>`;
+  });
+  // ---- BOUGHT-HERE marker: vertical line at the moment of entry ----
+  let buyMk = "";
+  const oa = (isPrem ? (D?.opened_at || prem?.opened_at) : null)
+           || (D?.entry_ts ? Date.parse(D.entry_ts)/1000 : null)
+           || b?.opened_at;
+  if (oa && t.length === N){
+    let bi = -1;
+    for (let i = i0; i <= i1; i++) if (t[i] <= oa) bi = i;
+    if (bi > i0){
+      const x = X(bi);
+      const flip = x > W - PAD.r - 110;          // keep the label on-screen
+      buyMk = `<line x1="${x}" y1="${PAD.t}" x2="${x}" y2="${PAD.t+chartH}" stroke="var(--warning)"
+                stroke-width="1.2" stroke-dasharray="2,4" opacity=".8"/>
+               <text x="${flip ? x-5 : x+5}" y="${PAD.t+chartH-6}" fill="var(--warning)" font-size="10.5"
+                font-weight="600" text-anchor="${flip ? "end" : "start"}">\u25b2 BOUGHT HERE</text>`;
+    }
+  }
+
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = g + tax + vol + mk + buyMk + body + `
+    <g id="cross" style="display:none">
+      <line id="cx" y1="${PAD.t}" y2="${PAD.t+chartH}" stroke="#898781" stroke-width="1" stroke-dasharray="3,3"/>
+      <circle id="cdot" r="4" fill="${col}" stroke="#000" stroke-width="1.5"/>
+    </g>`;
+  svg._geo = {X, Y, o, h, l, c, v, t, i0, i1, N, W, H, PAD, chartH, first, candles, step};
+  BIGVIEW = {i0, i1, n: N};
+  const zoomTxt = `<span class="lgd" style="color:var(--muted)">scroll = zoom \u00b7 drag = pan \u00b7 double-click = reset \u00b7 showing ${M} of ${N}</span>`;
+  document.getElementById("bigLegend").innerHTML = lines
+    .map(([k,val,cc,txt,off]) => val ? `<span class="lgd" style="color:${cc}"><i></i>${txt} ${f(val)}${off?" \u2197":""}</span>` : "").join("")
+    + zoomTxt;
+}
+
+/* ---- crosshair, wheel-zoom, drag-pan ---- */
+(function bindChart(){
+  const svg = document.getElementById("bigSvg"), tip = document.getElementById("bigTip");
+  const idxAt = (g, clientX) => {
+    const r = svg.getBoundingClientRect();
+    const px = (clientX - r.left) * (g.W / r.width);
+    const M = g.i1 - g.i0 + 1;
+    let i = g.i0 + Math.floor(((px - g.PAD.l) / (g.W - g.PAD.l - g.PAD.r)) * M);
+    return Math.max(g.i0, Math.min(g.i1, i));
+  };
+  svg.addEventListener("mousemove", e => {
+    const g = svg._geo; if (!g) return;
+    if (svg._drag){                       // panning
+      const r = svg.getBoundingClientRect();
+      const M = g.i1 - g.i0 + 1;
+      const perPx = M / (r.width * (1 - (g.PAD.l + g.PAD.r) / g.W));
+      const shift = Math.round((svg._drag.x - e.clientX) * perPx);
+      if (shift !== 0){
+        let i0 = svg._drag.i0 + shift, i1 = svg._drag.i1 + shift;
+        if (i0 < 0){ i1 -= i0; i0 = 0; }
+        if (i1 > g.N - 1){ i0 -= (i1 - (g.N - 1)); i1 = g.N - 1; i0 = Math.max(0, i0); }
+        BIGVIEW = {i0, i1, n: g.N}; drawBig();
+      }
+      return;
+    }
+    const i = idxAt(g, e.clientX);
+    const val = g.c[i], x = g.X(i), y = g.Y(val);
+    const cross = svg.querySelector("#cross");
+    if (cross){
+      cross.style.display = "";
+      svg.querySelector("#cx").setAttribute("x1", x);
+      svg.querySelector("#cx").setAttribute("x2", x);
+      svg.querySelector("#cdot").setAttribute("cx", x);
+      svg.querySelector("#cdot").setAttribute("cy", y);
+    }
+    const d = (val - g.first) / (g.first || 1);
+    const F = z => (+z).toFixed(2);
+    tip.style.display = "block";
+    tip.innerHTML = (g.candles
+        ? `<b>${F(g.c[i])}</b> <span style="color:${g.c[i]>=g.o[i]?'#0ca30c':'#d03b3b'}">`
+          + `${g.c[i]>=g.o[i]?"\u25b2":"\u25bc"}</span><br>`
+          + `<span style="color:#898781">O ${F(g.o[i])} H ${F(g.h[i])} L ${F(g.l[i])}</span>`
+          + (g.v.length ? `<br><span style="color:#898781">vol ${(g.v[i]||0).toLocaleString()}</span>` : "")
+        : `<b>${F(val)}</b> <span style="color:${d>=0?'#0ca30c':'#d03b3b'}">${d>=0?"+":""}${(100*d).toFixed(2)}%</span>`)
+      + (g.t.length === g.N ? `<br><span style="color:#898781">${fmtT(g.t[i])}</span>` : "");
+    const wr = document.getElementById("bigSvgWrap").getBoundingClientRect();
+    let tx = e.clientX - wr.left + 14;
+    if (tx + tip.offsetWidth > wr.width) tx = e.clientX - wr.left - tip.offsetWidth - 14;
+    tip.style.left = tx + "px";
+    tip.style.top = Math.max(0, e.clientY - wr.top - 50) + "px";
+  });
+  // scroll wheel zooms the chart instead of scrolling the page
+  svg.addEventListener("wheel", e => {
+    const g = svg._geo; if (!g) return;
+    e.preventDefault();
+    const anchor = idxAt(g, e.clientX);
+    const M = g.i1 - g.i0 + 1;
+    const factor = e.deltaY > 0 ? 1.22 : 0.82;         // out : in
+    let nm = Math.round(M * factor);
+    nm = Math.max(8, Math.min(g.N, nm));
+    const frac = (anchor - g.i0) / Math.max(1, M - 1);
+    let i0 = Math.round(anchor - frac * (nm - 1)), i1 = i0 + nm - 1;
+    if (i0 < 0){ i1 -= i0; i0 = 0; }
+    if (i1 > g.N - 1){ i0 -= (i1 - (g.N - 1)); i1 = g.N - 1; i0 = Math.max(0, i0); }
+    BIGVIEW = {i0, i1, n: g.N};
+    drawBig();
+  }, {passive: false});
+  svg.addEventListener("mousedown", e => {
+    const g = svg._geo; if (!g) return;
+    svg._drag = {x: e.clientX, i0: g.i0, i1: g.i1};
+    svg.style.cursor = "grabbing";
+    tip.style.display = "none";
+  });
+  const endDrag = () => { svg._drag = null; svg.style.cursor = "crosshair"; };
+  window.addEventListener("mouseup", endDrag);
+  svg.addEventListener("dblclick", () => { BIGVIEW = null; drawBig(); });
+  svg.addEventListener("mouseleave", () => {
+    endDrag();
+    tip.style.display = "none";
+    const c = svg.querySelector("#cross"); if (c) c.style.display = "none";
+  });
+  window.addEventListener("resize", () => { if (BIG) drawBig(); });
+})();
+
+async function buyNow(sym, dir){
+  const what = dir ? `a ${dir.toUpperCase()} on ${sym}` : sym;
+  if (!confirm(`Buy ${what} right now at market?\n\nThe bot sizes it with your normal spending cap and then manages the exit (stops, trailing, targets) like any other trade.`)) return;
+  const r = await fetch("/buy",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(dir?{symbol:sym,direction:dir}:{symbol:sym})}).then(r=>r.json()).catch(()=>({ok:false,error:"no connection"}));
+  alert(r.ok ? "Buy queued — the bot places it within a few seconds. Watch the Activity feed for the fill."
+             : "Couldn't buy: " + r.error);
+}
+
+async function refresh(){
+  try {
+    const r = await fetch("/state");
+    const st = await r.json();
+    window._st = st;                 // the big chart reads this
+    document.body.classList.remove("stale");
+    if (st.status){ document.getElementById("stamp").textContent = st.status; return; }
+
+    document.getElementById("stamp").textContent = "updated " + new Date(st.updated).toLocaleTimeString();
+    const bn = st.config?.bot_name;
+    if (bn){ const h = document.querySelector("header h1");
+             if (h && h.textContent !== bn) h.textContent = bn;
+             if (document.title !== bn) document.title = bn; }
+    const mode = document.getElementById("mode");
+    const isPaper = (st.mode || "").includes("PAPER");
+    mode.textContent = st.mode + (isPaper ? " · FAKE MONEY" : " · REAL MONEY");
+    mode.className = "badge " + (isPaper ? "paper" : "halted");
+    const mkt = document.getElementById("market");
+    mkt.textContent = st.market?.is_open ? "STOCKS OPEN" : "STOCKS CLOSED · CRYPTO 24/7";
+    mkt.className = "badge " + (st.market?.is_open ? "open" : "");
+    const prof = st.config?.risk_profile;
+    const profEl = document.getElementById("riskprofile");
+    if (prof && profEl) { profEl.style.display=""; profEl.textContent = "RISK " + prof; }
+    const rf = document.getElementById("riskflag");
+    if (st.risk?.hard_killed){ rf.style.display=""; rf.textContent="⛔ KILL SWITCH — TRADING STOPPED"; rf.className="badge halted"; }
+    else if (st.risk?.halted_today){ rf.style.display=""; rf.textContent="⚠ DAILY LOSS LIMIT — PAUSED TODAY"; rf.className="badge halted"; }
+    else rf.style.display="none";
+
+    const eq = st.account?.equity, dayStart = st.risk?.day_start_equity;
+    document.getElementById("equity").textContent = fmtUsd(eq);
+    document.getElementById("cash").textContent = fmtUsd(st.account?.cash);
+
+    // ---- the verdict ----
+    const v = document.getElementById("verdict");
+    const positions = st.positions || [];
+    const upl = positions.reduce((a,p)=>a+(p.unrealized_pl||0),0);
+    if (eq!=null && dayStart){
+      const day = eq - dayStart, dayPct = day/dayStart;
+      const cls = day >= 0 ? "up" : "down";
+      v.className = "verdict " + cls;
+      document.getElementById("vArrow").textContent = day >= 0 ? "▲" : "▼";
+      document.getElementById("vHead").textContent =
+        (day >= 0 ? "UP " : "DOWN ") + fmtUsd(Math.abs(day)) + " today (" + fmtPct(dayPct) + ")";
+      document.getElementById("vSub").textContent =
+        positions.length === 0
+          ? "No trades open — watching " + (st.config?.symbols?.length ?? "—") + " markets for a signal."
+          : positions.length + " trade" + (positions.length>1?"s":"") + " open, " +
+            (upl>=0 ? "winning " : "losing ") + fmtUsd(Math.abs(upl)) + " right now.";
+      document.getElementById("dayPl").textContent = fmtSigned(day);
+      document.getElementById("dayPl").className = "value " + (day>=0?"up-text":"down-text");
+      document.getElementById("dayPlPct").textContent = fmtPct(dayPct) + " since the day started";
+      if (equityHist.length===0 || equityHist[equityHist.length-1]!==eq){
+        equityHist.push(eq); if (equityHist.length>120) equityHist.shift();
+      }
+      drawSpark(document.getElementById("spark"), equityHist, cls);
+    }
+
+    const uplEl = document.getElementById("upl");
+    uplEl.textContent = fmtSigned(upl);
+    uplEl.className = "value " + (upl>0?"up-text":(upl<0?"down-text":""));
+    document.getElementById("posdetail").textContent =
+      positions.length + " open · watching " + (st.config?.symbols?.length ?? "—") + " markets";
+
+    // ---- positions table ----
+    const posDiv = document.getElementById("positions");
+    if (!positions.length){
+      posDiv.innerHTML = "<div class='empty'>Nothing open right now. The bot only trades when the evidence meter crosses its threshold — patience is part of the strategy.</div>";
+    } else {
+      const ctl = !!st.config?.controls;
+      posDiv.innerHTML = `<table><thead><tr>
+        <th>Symbol</th><th>Live graph</th><th>Winning?</th><th>Your profit right now</th><th>P&amp;L %</th>
+        <th>Qty</th><th>Bought at</th><th>Now</th><th>Sells if it falls to</th><th>Target</th>${ctl?"<th></th>":""}</tr></thead><tbody>` +
+        positions.map(p=>{
+          const b = Object.entries(st.book||{}).find(([k])=>k.replace("/","")===p.symbol);
+          const stop = b?.[1]?.stop, tp = b?.[1]?.tp;
+          const und = b?.[1]?.underlying || p.symbol;
+          const isOptPos = (p.symbol || "").length > 12;   // OCC option symbol
+          const win = p.unrealized_pl >= 0;
+          return `<tr class="${win?'winrow':'loserow'}">
+            <td class="sym">${p.symbol}</td>
+            <td>${miniChart(chartFor(st.charts, und),
+                            isOptPos ? (b?.[1]?.und_entry_px || null) : p.avg_entry,
+                            p.avg_entry,
+                            isOptPos && b?.[1]?.und_entry_px
+                              ? "stock " + (+b[1].und_entry_px).toFixed(2) + " @ buy" : null,
+                            `openBig('${p.symbol}','${und}',${isOptPos})`)}</td>
+            <td class="${win?'up-text':'down-text'}" style="font-weight:600">${win?"▲ YES":"▼ NO"}</td>
+            <td class="plbig ${win?'up-text':'down-text'}" style="font-size:19px">
+              ${(p.unrealized_pl>=0?"UP ":"DOWN ")+fmtUsd(Math.abs(p.unrealized_pl))}</td>
+            <td class="${win?'up-text':'down-text'}">${fmtPct(p.unrealized_plpc)}</td>
+            <td>${(+p.qty).toFixed(4)}</td><td>${fmtUsd(p.avg_entry)}</td>
+            <td>${fmtUsd(p.current_price)}</td>
+            <td>${stop?fmtUsd(stop):"—"}</td><td>${tp?fmtUsd(tp):"—"}</td>
+            ${ctl?`<td><button style="background:#7a2222;color:#fff;border:1px solid #a33;
+              border-radius:6px;padding:3px 10px;font-size:11px;cursor:pointer"
+              onclick="sellNow('${p.symbol}')">Sell now</button></td>`:""}</tr>`;
+        }).join("") + "</tbody></table>";
+    }
+
+    // ---- strictness slider ----
+    // ---- observe only ----
+    if (st.config?.observe_only !== undefined){
+      const ob = !!st.config.observe_only;
+      document.getElementById("obsCard").style.display = "";
+      document.getElementById("obsInner").style.borderColor = ob ? "#fab219" : "";
+      document.getElementById("obsTitle").textContent =
+        ob ? "👁 OBSERVE ONLY is ON — no orders will be placed"
+           : "Observe only is off — the bot can place orders";
+      document.getElementById("obsHint").textContent = ob
+        ? "It keeps watching, charting and reasoning, and logs what it WOULD have traded. Buy/Sell buttons are hidden."
+        : "Turn this on to run the bot as a pure spectator: charts and reasoning stay live, but it never buys or sells.";
+      const btn = document.getElementById("obsBtn");
+      btn.textContent = ob ? "Turn OFF" : "Turn ON";
+      btn.style.background = ob ? "#7a2222" : "#2a2a28";
+    }
+    if (st.config?.controls && st.config?.strictness != null){
+      document.getElementById("strictCard").style.display = "";
+      const sl = document.getElementById("strictSlider");
+      if (!window._strictDrag && !window._strictBusy){
+        sl.value = st.config.strictness;
+        strictPreview();
+      }
+    }
+
+    // ---- signals ----
+    const sigDiv = document.getElementById("signals");
+    const sigs = Object.entries(st.signals||{});
+    const thr = st.config?.entry_threshold ?? 0.5;
+    const isOpt = (st.mode||"").includes("OPTIONS");
+    const sctl = !!st.config?.controls;
+    if (!sigs.length) sigDiv.innerHTML = "<div class='empty'>Waiting for first data pull…</div>";
+    else sigDiv.innerHTML = `<table><thead><tr><th>Symbol</th><th>Live graph</th><th>Evidence meter</th><th>Status</th>${isOpt?"<th>Option price now</th>":""}${sctl?"<th>Trade it yourself</th>":""}</tr></thead><tbody>` +
+      sigs.sort((a,b)=>Math.abs(b[1].composite)-Math.abs(a[1].composite))
+          .map(([sym,s])=>sigRow(sym,s,thr,st.charts,isOpt,sctl,st.blocked,st.candidates)).join("") + "</tbody></table>";
+
+    const evs = st.events||[];
+    if (evs.length) document.getElementById("events").innerHTML =
+      evs.map(e=>`<li><span class="t">${e.t}</span>${e.msg}</li>`).join("");
+
+    if (BIG){ drawBig(); loadBigData(); }   // keep the big chart live while open
+  } catch (e) {
+    document.body.classList.add("stale");
+    document.getElementById("stamp").textContent = "reconnecting…";
+  }
+}
+refresh();
+async function sellNow(sym){
+  if (!confirm(`Sell ${sym} right now at the current market price?\n\nThis overrides the bot's exit plan for this position.`)) return;
+  const r = await fetch("/close",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({symbol:sym})}).then(r=>r.json()).catch(()=>({ok:false,error:"no connection"}));
+  alert(r.ok ? "Sell queued — the bot executes it within a few seconds."
+             : "Couldn't sell: " + r.error);
+}
+function strictPreview(){
+  const v = parseFloat(document.getElementById("strictSlider").value);
+  document.getElementById("strictVal").textContent = "±" + v.toFixed(2);
+  const t = document.getElementById("strictTxt");
+  t.style.color = "var(--muted)";
+  if (v >= 0.24) t.textContent = v.toFixed(2)+" — very strict: only the strongest setups. Few trades, low fee drag, some missed winners.";
+  else if (v >= 0.18) t.textContent = v.toFixed(2)+" — the tested zone (tuning centered on 0.18-0.20). Balanced trade count vs. signal quality.";
+  else if (v >= 0.14) t.textContent = v.toFixed(2)+" — eager: noticeably more trades on noticeably weaker signals. Fees start to matter.";
+  else { t.textContent = v.toFixed(2)+" — ⚠ hair-trigger: signals this small are mostly noise. Expect constant trades, each paying the spread.";
+         t.style.color = "#e05555"; }
+}
+document.getElementById("strictSlider").addEventListener("pointerdown", ()=>window._strictDrag=true);
+document.getElementById("strictSlider").addEventListener("pointerup",   ()=>window._strictDrag=false);
+async function toggleObserve(){
+  const st = window._st || {};
+  const on = !st.config?.observe_only;
+  const open = (st.positions || []).length;
+  if (on){
+    const warn = open ? ("\n\nWARNING: " + open + " position(s) are open. In observe "
+      + "mode they are NOT managed \u2014 no stop, no target \u2014 until you turn it off.") : "";
+    if (!confirm("Turn ON observe only?\n\nThe bot keeps watching, charting and "
+      + "reasoning, but places NO orders and the Buy/Sell buttons disappear." + warn)) return;
+  } else if (!confirm("Turn OFF observe only?\n\nThe bot will be able to place orders again.")) return;
+  const r = await fetch("/observe", {method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({on})}).then(r=>r.json()).catch(()=>({ok:false,error:"no connection"}));
+  if (!r.ok) alert("Couldn't change it: " + (r.error || "unknown error"));
+  refresh();
+}
+
+async function strictApply(){
+  window._strictBusy = true;
+  const v = parseFloat(document.getElementById("strictSlider").value);
+  const r = await fetch("/strictness",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({value:v})}).then(r=>r.json()).catch(()=>({ok:false,error:"no connection"}));
+  const t = document.getElementById("strictTxt");
+  if (r.ok){ t.textContent = "✓ applied — the bot now buys at ±"+v.toFixed(2)+" (saved across restarts). " + t.textContent; }
+  else { t.textContent = "✗ " + r.error; t.style.color = "#e05555"; }
+  setTimeout(()=>{ window._strictBusy = false; }, 4000);
+}
+setInterval(refresh, 3000);
+</script>
+</body>
+</html>

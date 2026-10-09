@@ -1,0 +1,1884 @@
+2026-08-24T15:39:51+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T15:39:51+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T16:22:03+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T16:22:03+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T16:36:43+00:00  Signal strictness set to ±0.18 from the dashboard (saved — survives restarts, overrides config.yaml)
+2026-08-24T16:45:33+00:00  BUY CALL RIVN RIVN260904C00016500 x13 @~$0.80 (score +0.23)
+2026-08-24T16:48:55+00:00  MANUAL BUY: you clicked Buy CALL on AMZN — skipping signal checks, sized by your normal premium cap
+2026-08-24T16:48:56+00:00  BUY CALL AMZN AMZN260831C00262500 x2 @~$4.63 (score +0.09)
+2026-08-24T16:50:48+00:00  CANCELLED unfilled option order RIVN260904C00016500
+2026-08-24T16:56:20+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T16:56:20+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T16:58:14+00:00  BUY CALL RIVN RIVN260904C00016500 x14 @~$0.77 (score +0.20)
+2026-08-24T17:03:25+00:00  CANCELLED unfilled option order RIVN260904C00016500
+2026-08-24T17:07:43+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T17:07:43+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T17:17:37+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T17:17:37+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T17:27:36+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T17:27:36+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T17:27:36+00:00  Account type: MARGIN (multiplier 4) — PDT guard ACTIVE below $25k (0 day trades used per Alpaca)
+2026-08-24T17:45:33+00:00  BUY CALL COIN COIN260904C00182500 x1 @~$8.84 (score +0.19)
+2026-08-24T17:50:52+00:00  CANCELLED unfilled option order COIN260904C00182500
+2026-08-24T17:54:03+00:00  BUY CALL COIN COIN260904C00182500 x1 @~$8.91 (score +0.19)
+2026-08-24T18:47:03+00:00  BUY CALL TSLA TSLA260831C00352500 x1 @~$7.29 (score +0.21)
+2026-08-24T19:08:41+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-08-24T19:11:23+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T19:11:23+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T19:11:23+00:00  Account type: MARGIN (multiplier 4) — PDT guard ACTIVE below $25k (0 day trades used per Alpaca)
+2026-08-24T19:22:44+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11002] getaddrinfo failed)"))
+2026-08-24T19:23:24+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T19:23:24+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T19:23:24+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-24T19:27:27+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:45:34+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:46:39+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:47:22+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:47:53+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:48:39+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:49:24+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:50:22+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:51:14+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:52:03+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:52:58+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:53:32+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:53:55+00:00  SKIP HOOD: max open positions reached
+2026-08-24T19:54:47+00:00  SKIP HOOD: max open positions reached
+2026-08-24T22:15:41+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T22:15:41+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T22:15:41+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-24T23:06:24+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T23:06:24+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T23:06:24+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-24T23:16:07+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-24T23:16:07+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-24T23:16:07+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T00:59:33+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T00:59:33+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T00:59:33+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T01:43:37+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T01:43:37+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T01:43:37+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T01:47:38+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T01:47:38+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T01:47:38+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T01:56:33+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T01:56:33+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T01:56:33+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T11:08:59+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-08-25T11:09:00+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:09:15+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:09:30+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:09:45+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:10:00+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:10:15+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:10:30+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:10:45+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:11:00+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:11:15+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:11:30+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:11:45+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:12:00+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:12:15+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:12:30+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:12:45+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:13:00+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:13:15+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:13:30+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:13:45+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-25T11:15:54+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T11:15:54+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T11:15:54+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T11:47:47+00:00  Signal strictness set to ±0.21 from the dashboard (saved — survives restarts, overrides config.yaml)
+2026-08-25T11:47:51+00:00  Signal strictness set to ±0.21 from the dashboard (saved — survives restarts, overrides config.yaml)
+2026-08-25T11:47:55+00:00  Signal strictness set to ±0.21 from the dashboard (saved — survives restarts, overrides config.yaml)
+2026-08-25T13:31:19+00:00  CLOSE COIN260904C00182500 (premium stop) -52% on premium
+2026-08-25T13:31:41+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:32:11+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:32:40+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:33:25+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:33:53+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:34:28+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:35:05+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:35:36+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:36:15+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:36:52+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:37:34+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:38:11+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:38:32+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:39:22+00:00  SKIP COIN: COIN in post-loss cooldown
+2026-08-25T13:39:51+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T13:39:51+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T13:39:51+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T13:39:55+00:00  SKIP COIN: one call costs $1,171, over the $981 premium cap
+2026-08-25T13:40:28+00:00  SKIP COIN: one call costs $1,192, over the $994 premium cap
+2026-08-25T13:41:06+00:00  SKIP COIN: one call costs $1,215, over the $997 premium cap
+2026-08-25T13:41:56+00:00  SKIP COIN: one call costs $1,181, over the $997 premium cap
+2026-08-25T13:42:38+00:00  SKIP COIN: one call costs $1,168, over the $993 premium cap
+2026-08-25T13:43:21+00:00  SKIP COIN: one call costs $1,102, over the $990 premium cap
+2026-08-25T13:44:07+00:00  SKIP COIN: one call costs $1,011, over the $988 premium cap
+2026-08-25T13:44:50+00:00  SKIP COIN: one call costs $1,050, over the $989 premium cap
+2026-08-25T13:45:08+00:00  BUY CALL HOOD HOOD260904C00106000 x1 @~$5.20 (score +0.21)
+2026-08-25T13:54:13+00:00  Signal strictness set to ±0.25 from the dashboard (saved — survives restarts, overrides config.yaml)
+2026-08-25T13:54:18+00:00  Signal strictness set to ±0.22 from the dashboard (saved — survives restarts, overrides config.yaml)
+2026-08-25T13:57:35+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T13:57:35+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T13:57:35+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T14:02:42+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T14:02:42+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T14:02:42+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T14:13:58+00:00  CLOSE AMZN260831C00262500 (premium stop) -34% on premium
+2026-08-25T14:16:01+00:00  CLOSE HOOD260904C00106000 (trailing ratchet (peaked +23%, kept the floor)) +12% on premium
+2026-08-25T14:16:39+00:00  BUY CALL HOOD HOOD260904C00108000 x1 @~$5.18 (score +0.23)
+2026-08-25T14:38:52+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T14:38:52+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T14:38:52+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T15:01:30+00:00  BUY CALL RIVN RIVN260904C00016500 x12 @~$0.77 (score +0.23)
+2026-08-25T15:04:45+00:00  CLOSE HOOD260904C00108000 (trailing ratchet (peaked +23%, kept the floor)) +15% on premium
+2026-08-25T15:05:27+00:00  BUY CALL HOOD HOOD260904C00110000 x1 @~$5.03 (score +0.25)
+2026-08-25T15:06:03+00:00  SKIP MARA: max open positions reached
+2026-08-25T15:06:45+00:00  SKIP MARA: max open positions reached
+2026-08-25T15:12:10+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:12:34+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:13:19+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:14:16+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:31:00+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:31:36+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:33:23+00:00  SKIP SOFI: max open positions reached
+2026-08-25T15:33:33+00:00  CLOSE TSLA260831C00352500 (trailing ratchet (peaked +15%, kept the floor)) +6% on premium
+2026-08-25T15:33:58+00:00  BUY CALL TSLA TSLA260902C00355000 x1 @~$8.41 (score +0.27)
+2026-08-25T15:45:12+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T15:45:12+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T15:45:12+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T15:56:28+00:00  CLOSE HOOD260904C00110000 (signal flipped) +10% on premium
+2026-08-25T16:01:06+00:00  BUY CALL SOFI SOFI260904C00019000 x16 @~$0.61 (score +0.28)
+2026-08-25T16:01:09+00:00  SKIP HOOD: max open positions reached
+2026-08-25T16:01:52+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:01:24+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:02:03+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:02:07+00:00  CLOSE TSLA260902C00355000 (trailing ratchet (peaked +15%, kept the floor)) +7% on premium
+2026-08-25T17:02:25+00:00  BUY CALL TSLA TSLA260902C00355000 x1 @~$8.62 (score +0.30)
+2026-08-25T17:02:42+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:03:12+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:03:29+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:03:49+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:04:28+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:04:58+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:05:35+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:06:21+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:07:05+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:07:44+00:00  SKIP HOOD: max open positions reached
+2026-08-25T17:36:48+00:00  SKIP COIN: max open positions reached
+2026-08-25T17:37:41+00:00  SKIP COIN: max open positions reached
+2026-08-25T17:38:41+00:00  SKIP COIN: max open positions reached
+2026-08-25T17:39:17+00:00  SKIP COIN: max open positions reached
+2026-08-25T17:39:40+00:00  SKIP COIN: max open positions reached
+2026-08-25T17:40:21+00:00  SKIP COIN: max open positions reached
+2026-08-25T17:40:29+00:00  CLOSE RIVN260904C00016500 (signal flipped) +5% on premium
+2026-08-25T17:41:04+00:00  BUY CALL COIN COIN260904C00187500 x1 @~$9.07 (score +0.22)
+2026-08-25T17:46:25+00:00  CANCELLED unfilled option order COIN260904C00187500
+2026-08-25T18:01:34+00:00  BUY CALL HOOD HOOD260904C00111000 x1 @~$5.06 (score +0.22)
+2026-08-25T18:03:25+00:00  CLOSE SOFI260904C00019000 (signal flipped) +7% on premium
+2026-08-25T18:10:45+00:00  CLOSE HOOD260904C00111000 (signal flipped) -0% on premium
+2026-08-25T18:46:27+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T18:46:27+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T18:46:27+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T18:47:16+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T18:47:16+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T18:47:16+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-25T18:49:40+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-25T18:49:40+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-25T18:49:40+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-26T01:43:31+00:00  cycle error: ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine'))
+2026-08-26T01:44:46+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-26T01:44:46+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-26T01:44:46+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-26T12:07:47+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-26T12:52:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-26T13:30:30+00:00  CLOSE TSLA260902C00355000 (premium stop) -61% on premium
+2026-08-26T13:30:34+00:00  SKIP TSLA: TSLA in post-loss cooldown
+2026-08-26T13:31:04+00:00  SKIP TSLA: TSLA in post-loss cooldown
+2026-08-26T13:31:27+00:00  SKIP TSLA: TSLA in post-loss cooldown
+2026-08-26T13:31:53+00:00  SKIP TSLA: TSLA in post-loss cooldown
+2026-08-26T13:36:36+00:00  SKIP META: one call costs $1,138, over the $940 premium cap
+2026-08-26T13:59:23+00:00  SKIP META: one call costs $1,257, over the $940 premium cap
+2026-08-26T13:59:59+00:00  SKIP META: one call costs $1,258, over the $940 premium cap
+2026-08-26T14:00:44+00:00  SKIP META: one call costs $1,290, over the $940 premium cap
+2026-08-26T14:01:21+00:00  SKIP AMD: one call costs $1,518, over the $940 premium cap
+2026-08-26T14:01:39+00:00  BUY CALL SOFI SOFI260904C00019000 x11 @~$0.82 (score +0.23)
+2026-08-26T14:01:54+00:00  SKIP AMD: one call costs $1,550, over the $935 premium cap
+2026-08-26T14:02:37+00:00  SKIP AMD: one call costs $1,704, over the $933 premium cap
+2026-08-26T14:03:15+00:00  SKIP AMD: one call costs $1,410, over the $922 premium cap
+2026-08-26T14:03:58+00:00  SKIP AMD: one call costs $1,697, over the $920 premium cap
+2026-08-26T14:04:41+00:00  SKIP AMD: one call costs $1,504, over the $922 premium cap
+2026-08-26T14:05:27+00:00  SKIP AMD: one call costs $1,401, over the $924 premium cap
+2026-08-26T14:05:49+00:00  SKIP AMD: one call costs $1,750, over the $924 premium cap
+2026-08-26T14:06:39+00:00  SKIP AMD: one call costs $1,723, over the $924 premium cap
+2026-08-26T14:07:18+00:00  SKIP AMD: one call costs $1,703, over the $928 premium cap
+2026-08-26T14:07:19+00:00  SKIP META: one call costs $1,243, over the $928 premium cap
+2026-08-26T14:08:13+00:00  SKIP AMD: one call costs $1,823, over the $924 premium cap
+2026-08-26T14:08:17+00:00  SKIP META: one call costs $1,312, over the $924 premium cap
+2026-08-26T14:08:56+00:00  SKIP AMD: one call costs $1,796, over the $924 premium cap
+2026-08-26T14:08:59+00:00  SKIP META: one call costs $1,305, over the $924 premium cap
+2026-08-26T14:09:27+00:00  SKIP META: one call costs $1,319, over the $924 premium cap
+2026-08-26T14:10:03+00:00  SKIP META: one call costs $1,253, over the $920 premium cap
+2026-08-26T14:10:30+00:00  BUY CALL RIVN RIVN260904C00016000 x10 @~$0.86 (score +0.23)
+2026-08-26T14:10:46+00:00  SKIP META: one call costs $1,115, over the $920 premium cap
+2026-08-26T14:13:49+00:00  CLOSE SOFI260904C00019000 (fast-bleed cut (down -18% in 12m — cut small)) -18% on premium
+2026-08-26T14:58:42+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-26T14:58:42+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-26T14:58:42+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-26T14:58:45+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T14:58:58+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T14:59:13+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T14:59:28+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T14:59:43+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T14:59:58+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:00:15+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:00:29+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:00:45+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:00:59+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:01:14+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:01:31+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:01:47+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:01:59+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:02:27+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:02:43+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:03:00+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:03:22+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:03:43+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:04:04+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:04:37+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:05:00+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:05:20+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:05:47+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:15:50+00:00  CLOSE RIVN260904C00016000 (premium stop) -35% on premium
+2026-08-26T15:24:08+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:24:27+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:24:41+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:24:53+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:25:12+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:25:27+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:25:41+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:25:58+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:26:10+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:26:28+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:26:43+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:26:58+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:27:12+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:27:30+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:27:44+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:28:01+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:28:13+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:28:35+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:28:48+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:30:11+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:30:28+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:30:41+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:30:57+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T15:31:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:31:02+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:31:12+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:31:23+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:31:23+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:31:30+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:31:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:31:36+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:31:45+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:31:53+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:31:57+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:32:00+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:32:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:32:05+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:32:16+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:32:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:32:21+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:32:30+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:32:39+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:32:39+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:32:48+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:32:56+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:32:56+00:00  SKIP RIVN: daily loss limit hit — no new trades today
+2026-08-26T15:33:06+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:33:11+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:33:21+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:33:29+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:33:36+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:33:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:33:50+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:34:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:34:08+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:34:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:34:23+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:34:31+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:34:38+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:34:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:34:53+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:35:04+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:35:11+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:35:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:35:26+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:35:35+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:35:44+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:35:53+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:35:58+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:36:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:36:17+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:36:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:36:32+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:36:40+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:36:52+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:36:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:37:07+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:37:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:37:19+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:37:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:37:34+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:37:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T15:37:52+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T15:38:00+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:01:02+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:01:09+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:01:09+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:01:19+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:01:24+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:01:24+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:01:37+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:01:39+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:01:46+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:01:51+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:01:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:02:00+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:02:03+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:02:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:02:12+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:02:21+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:02:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:02:27+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:02:37+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:02:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:02:43+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:02:52+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:03:00+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:03:12+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:03:17+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:03:24+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:03:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:03:39+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:03:47+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:03:54+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:04:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:04:12+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:04:17+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:04:27+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:04:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:04:42+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:04:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:04:54+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:05:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:05:10+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:05:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:05:25+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:05:34+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:05:40+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:05:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:05:55+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-26T16:06:03+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:06:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:06:35+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:06:51+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:07:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:07:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:07:38+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:07:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:08:10+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:08:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:08:39+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:08:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:10:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:10:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:10:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:11:03+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:11:17+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:11:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:11:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:12:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:12:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:12:31+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:12:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:13:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:13:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:13:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:13:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:14:13+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:14:24+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:14:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:15:00+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:15:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:15:28+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:15:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:15:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:16:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:16:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:16:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:16:59+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:17:17+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:17:33+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:17:47+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:18:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:18:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:18:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:18:53+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:19:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:19:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:19:39+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:19:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:20:10+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:20:26+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:20:41+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:20:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:21:13+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:21:28+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:21:40+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:22:01+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:22:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:22:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:22:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:22:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:23:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:23:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:23:51+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:25:03+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:25:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:25:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:25:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:26:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:26:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:26:37+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:26:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:27:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:27:24+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:27:41+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:28:00+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:28:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:28:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:28:45+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:29:03+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:29:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:29:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:29:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:30:14+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:30:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:30:49+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:31:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:31:05+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:31:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:31:21+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:31:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:31:37+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:31:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:31:54+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:32:09+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:32:10+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:32:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:32:25+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:32:40+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:32:40+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:32:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:32:56+00:00  SKIP SNAP: daily loss limit hit — no new trades today
+2026-08-26T16:33:11+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:33:26+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:33:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:33:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:34:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:34:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:34:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:35:03+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:35:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:35:35+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:35:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:36:08+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:36:35+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:36:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:37:10+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:37:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:37:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:37:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:38:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:38:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:38:56+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:39:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:39:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:39:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:40:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:40:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:40:37+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:40:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:41:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:41:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:41:37+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:41:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:42:03+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-26T16:42:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:42:15+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-26T16:42:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:42:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-26T16:42:39+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:42:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-26T16:42:53+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:43:00+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:43:08+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:43:15+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:43:26+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:43:32+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:43:37+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:43:47+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:43:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:44:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:44:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:44:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:44:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:45:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:45:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:45:49+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:46:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:46:46+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:47:04+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:47:16+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:47:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:47:37+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:47:45+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:48:03+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:48:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:48:31+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:48:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:48:58+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:49:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:49:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:49:38+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:49:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T16:50:02+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:50:19+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:50:34+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:50:52+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:51:04+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:51:22+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:51:38+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:51:55+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:52:11+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:52:26+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:52:38+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:52:55+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:53:16+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:53:25+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:53:40+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:53:55+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:54:13+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:54:31+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:54:45+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:55:09+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:55:31+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:55:52+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:56:13+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:56:33+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:56:56+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:59:05+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:59:20+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:59:35+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T16:59:53+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T17:00:08+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T17:00:23+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T17:00:38+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T17:00:56+00:00  SKIP META: daily loss limit hit — no new trades today
+2026-08-26T17:01:03+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:01:23+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:01:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:01:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:03:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:03:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:03:46+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:06:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:06:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:06:33+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T17:06:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:03:08+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:03:26+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:03:40+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:03:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:04:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:04:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:04:45+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:06:10+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:06:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:06:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:06:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:07:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:07:31+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:07:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:07:59+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:08:11+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:08:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:08:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:09:04+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:09:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:09:33+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:09:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:10:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:10:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:10:35+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T18:10:51+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-26T22:45:56+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-27T12:44:29+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-27T12:44:29+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-27T12:44:29+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-27T13:30:42+00:00  SKIP MARA: no tradeable call (bad spreads or no chain)
+2026-08-27T13:31:12+00:00  BUY CALL MARA MARA260904C00011000 x8 @~$0.95 (score +0.25)
+2026-08-27T13:32:24+00:00  CLOSE MARA260904C00011000 (fast-bleed cut (down -20% in 1m — cut small)) -20% on premium
+2026-08-27T14:29:30+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-27T14:29:30+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-27T14:29:30+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-27T15:31:12+00:00  BUY CALL PLTR PLTR260904C00185000 x1 @~$5.29 (score +0.22)
+2026-08-27T16:03:49+00:00  CLOSE PLTR260904C00185000 (trailing ratchet (peaked +17%, kept the floor)) +5% on premium
+2026-08-27T16:44:51+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-27T16:44:51+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-27T16:44:51+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-27T17:13:00+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-27T17:13:00+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-27T17:13:00+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-28T00:59:30+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-28T12:28:56+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-08-28T12:28:56+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-08-28T12:28:56+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-08-28T13:31:19+00:00  BUY CALL PLTR PLTR260904C00187500 x1 @~$4.94 (score +0.23)
+2026-08-28T13:59:35+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-08-28T14:02:20+00:00  BUY CALL MARA MARA260904C00011000 x13 @~$0.61 (score +0.37)
+2026-08-28T14:04:29+00:00  BUY CALL HOOD HOOD260904C00107000 x2 @~$3.75 (score +0.23)
+2026-08-28T14:12:55+00:00  CLOSE HOOD260904C00107000 (fast-bleed cut (down -19% in 8m — cut small)) -19% on premium
+2026-08-28T14:14:05+00:00  CLOSE MARA260904C00011000 (fast-bleed cut (down -19% in 12m — cut small)) -19% on premium
+2026-08-28T14:14:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:26:24+00:00  CLOSE PLTR260904C00187500 (premium stop) -33% on premium
+2026-08-28T14:31:30+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:31:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:31:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:32:28+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:32:28+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:32:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:33:06+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:33:06+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:33:10+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:33:26+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:33:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:33:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:33:51+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:33:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:33:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:34:40+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:34:40+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:34:47+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:35:30+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:35:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:35:38+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:36:09+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:36:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:36:13+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:36:56+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:36:57+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:37:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:37:22+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:37:25+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:37:29+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:38:07+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:38:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:38:14+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:38:43+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:38:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:38:56+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:39:22+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:39:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:39:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:40:08+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:40:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T14:40:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:41:03+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:41:56+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:42:45+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:43:21+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:43:53+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:44:38+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:44:55+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:45:26+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:46:12+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:46:45+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:47:25+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:48:06+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:48:14+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:48:54+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:49:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:49:34+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:49:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:50:01+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:50:41+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T14:52:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:52:55+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:53:15+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:54:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:54:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:55:31+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:56:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:57:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:57:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:58:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T14:59:28+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:00:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:01:08+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:01:49+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:02:30+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:03:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:03:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:04:36+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-08-28T15:04:48+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-28T15:04:52+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-28T15:05:13+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:06:23+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:06:29+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:06:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:07:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:08:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:08:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:08:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:09:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:09:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:09:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:10:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:10:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:10:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:10:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:11:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:11:46+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:12:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:12:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:12:54+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:13:01+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:13:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:13:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:14:06+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:14:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:14:48+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:15:04+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:15:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:15:56+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:16:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:16:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:17:29+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:18:29+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:19:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:19:51+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:20:34+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:21:23+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:21:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:22:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:23:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:23:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:24:00+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:24:34+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:25:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:27:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:28:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:28:21+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:29:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:29:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:29:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:29:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:30:20+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:30:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:31:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:31:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:31:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:31:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:32:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:32:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:32:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:32:50+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:33:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:33:18+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:33:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:33:43+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:34:18+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T15:34:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:34:26+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:34:58+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T15:34:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:35:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:35:47+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:36:01+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:36:38+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:36:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:37:18+00:00  SKIP PLTR: daily loss limit hit — no new trades today
+2026-08-28T15:37:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:37:28+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:38:03+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:38:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:38:16+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:38:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:39:05+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:39:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:39:44+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:40:12+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:40:19+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:40:55+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:40:59+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:41:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:41:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:41:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:42:27+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:42:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:42:34+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:43:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:43:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:43:34+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:44:12+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:44:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:45:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:45:04+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:45:37+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:45:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:45:48+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:46:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:46:14+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:46:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:47:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:47:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:47:35+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:48:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:48:25+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:48:25+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:48:54+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:49:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T15:49:01+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:49:45+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:49:49+00:00  SKIP SOFI: daily loss limit hit — no new trades today
+2026-08-28T15:49:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:50:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:50:53+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:51:54+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:51:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:52:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:52:34+00:00  SKIP SOFI: daily loss limit hit — no new trades today
+2026-08-28T15:52:37+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:52:57+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:53:01+00:00  SKIP SOFI: daily loss limit hit — no new trades today
+2026-08-28T15:53:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:53:45+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:53:52+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:54:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:54:46+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:55:22+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:55:41+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:56:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:56:29+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:57:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:57:10+00:00  SKIP SOFI: daily loss limit hit — no new trades today
+2026-08-28T15:57:20+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:57:55+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:57:58+00:00  SKIP SOFI: daily loss limit hit — no new trades today
+2026-08-28T15:58:08+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:58:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:58:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T15:59:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T15:59:40+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:00:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:00:22+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:00:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:00:58+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:01:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:01:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:01:34+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:02:10+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:02:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:02:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:02:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:03:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:03:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:04:29+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:04:44+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:05:30+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:05:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:06:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:06:05+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:06:06+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:06:29+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:06:36+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:06:36+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:07:06+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:07:07+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:07:07+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:07:29+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:07:30+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:07:33+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:07:53+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:07:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:07:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:08:38+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:08:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:08:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:09:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:09:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:09:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:10:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:10:05+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:10:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:10:44+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:11:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:11:23+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:11:24+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:11:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:12:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:12:08+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:12:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:12:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:12:57+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:13:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:13:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:13:51+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:14:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:14:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:14:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:15:15+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:15:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:15:31+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:15:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:16:02+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:16:02+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:16:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:16:23+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:16:27+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:16:41+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:16:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:16:51+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:17:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:17:21+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:17:40+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:17:44+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:18:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:18:29+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:19:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:19:11+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:20:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:20:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:20:22+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:20:25+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:20:42+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:20:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:21:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:21:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:22:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:22:26+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:23:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:23:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:23:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:23:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:24:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:24:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:24:53+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:24:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:25:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:25:29+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:25:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:26:02+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:26:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:26:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:26:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:27:00+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:27:28+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:27:35+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:28:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:28:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:28:54+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:29:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:29:35+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:29:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:30:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:30:26+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:30:53+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:31:00+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:31:32+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:31:42+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:31:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:31:56+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:32:21+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:32:21+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:32:28+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:32:29+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:32:32+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:32:51+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:32:57+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:33:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:33:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:33:14+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:33:36+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:33:37+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:33:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:33:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:33:54+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:34:16+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:34:20+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:34:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:34:36+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:34:58+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:34:58+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:35:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:35:09+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:35:40+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:35:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:35:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:36:10+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:36:17+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:36:24+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:36:58+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:37:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:37:09+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:37:37+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:37:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:37:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:38:29+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:38:36+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:39:17+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:39:24+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:39:55+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:40:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:40:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:40:38+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:41:12+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:41:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:41:23+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:42:00+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:42:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:42:14+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:42:38+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:42:42+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:42:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:42:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:43:17+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:43:20+00:00  SKIP AAPL: daily loss limit hit — no new trades today
+2026-08-28T16:43:30+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:43:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:44:04+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:44:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:44:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:44:46+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T16:44:57+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:44:58+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:45:40+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:45:50+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:46:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:46:29+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:46:59+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:47:12+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:47:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:47:35+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:47:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:47:41+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:48:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:48:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:48:45+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:49:20+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:50:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:50:12+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:50:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:50:42+00:00  SKIP MARA: daily loss limit hit — no new trades today
+2026-08-28T16:51:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:51:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:52:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:53:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:53:55+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:54:40+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:55:25+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:55:32+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:56:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:56:21+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T16:56:55+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:57:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:58:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:58:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:59:12+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T16:59:38+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:00:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:00:57+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:01:07+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:01:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:01:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:02:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:02:19+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:02:48+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:02:58+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:03:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:03:56+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:04:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:04:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:04:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:05:09+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:05:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:05:36+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:06:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:06:12+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:06:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:06:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:07:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:07:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:08:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:08:14+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:08:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:09:05+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:09:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:09:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:10:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:10:26+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:10:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:11:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:11:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:11:38+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:11:55+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:11:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:12:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:12:49+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:13:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:13:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:14:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:14:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:15:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:15:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:15:28+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:15:35+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:15:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:16:02+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:16:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:16:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:17:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:17:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:18:03+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:18:07+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:18:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:18:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:19:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:19:18+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:19:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:19:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:20:27+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:20:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:20:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:20:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:21:37+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:21:38+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:21:57+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:22:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:22:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:22:49+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:23:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:23:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:24:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:24:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:24:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:24:40+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:25:15+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:25:19+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:25:35+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:25:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:26:17+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:26:21+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:26:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:26:47+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:27:25+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:27:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:27:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:27:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:28:35+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:28:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:29:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:30:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:30:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:30:56+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:31:00+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:31:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:31:46+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:32:06+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:32:13+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:32:54+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:33:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:33:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:33:50+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:34:25+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:34:32+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:35:04+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:35:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:35:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:35:36+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:36:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:36:12+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:37:22+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:37:29+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:38:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:38:12+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:38:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:38:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:39:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:39:38+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:40:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:40:09+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:40:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:40:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:41:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:41:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:41:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:41:22+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:41:35+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:41:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:42:12+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:42:19+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:42:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:42:37+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:42:53+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:42:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:43:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:43:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:44:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:44:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:44:37+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:44:37+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:45:02+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T17:45:13+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:45:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:45:30+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T17:45:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:45:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:46:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:46:21+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:46:47+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:46:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:47:42+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:48:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:49:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:49:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:50:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:51:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:52:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:52:33+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:53:20+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:54:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:54:06+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:54:38+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:54:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:55:08+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:55:18+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:55:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:55:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:56:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:56:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:57:15+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:57:25+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:58:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:58:06+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:58:48+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:58:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T17:59:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T17:59:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:00:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:00:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:00:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:00:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:01:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:01:47+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:02:12+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:02:20+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:03:06+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:03:11+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:03:41+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:03:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:04:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:04:06+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:04:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:04:51+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:05:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:05:44+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:06:02+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:06:06+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:06:37+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:08:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:08:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:08:45+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:08:45+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:08:46+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:09:00+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:09:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:09:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:09:36+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:09:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:09:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:10:25+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:10:28+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:10:32+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:11:00+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:11:04+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:11:14+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:11:49+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:11:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:11:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:12:37+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:12:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:12:51+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:13:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:13:56+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:14:25+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:14:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:14:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:15:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:15:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:15:41+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:15:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:16:30+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:16:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:17:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:17:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:17:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:17:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:18:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:18:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:18:57+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:19:04+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:19:42+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:19:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:20:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:20:22+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:20:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:20:56+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:21:28+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:21:35+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:22:27+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:22:37+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:23:15+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:23:19+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:23:54+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:24:00+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:24:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:24:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:25:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:25:30+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:26:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:26:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:26:50+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:26:54+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:27:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:27:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:27:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:27:58+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:28:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:28:59+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:29:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:29:47+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:29:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:30:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:30:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:30:53+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:30:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:31:13+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:31:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:31:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:31:56+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:32:16+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:32:26+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:32:59+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:33:09+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:33:41+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:33:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:34:20+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:34:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:35:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:35:09+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:35:35+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:35:42+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:35:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:36:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:36:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:37:15+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:37:22+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:37:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:37:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:38:19+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:38:19+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:38:23+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:38:57+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:39:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:39:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:39:33+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:39:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:39:40+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:40:05+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:40:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:40:25+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:40:56+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:41:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:41:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:41:35+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:41:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:41:42+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:42:14+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:42:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:42:46+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:42:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:43:29+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:43:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:43:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:44:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:44:24+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:44:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:44:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:45:12+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:45:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:45:23+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:45:40+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:45:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:45:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:46:01+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:46:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:46:12+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:46:59+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T18:47:09+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:47:16+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:47:51+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:47:57+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:48:17+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:48:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:48:49+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:48:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:49:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:49:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:50:03+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:50:10+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:50:45+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:50:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:51:26+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:51:30+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:51:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:52:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:52:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:52:24+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:52:53+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:53:00+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:53:25+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:53:35+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:53:48+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:53:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:54:20+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:54:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:55:01+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:55:11+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:55:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:55:50+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:56:22+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:56:35+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:57:04+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:57:13+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:57:48+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:57:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:58:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:58:40+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:59:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:59:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:59:23+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T18:59:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T18:59:59+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:00:05+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:00:36+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:00:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:01:03+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T19:01:10+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:01:17+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:01:18+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:01:47+00:00  SKIP TSLA: daily loss limit hit — no new trades today
+2026-08-28T19:01:54+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:01:58+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:02:05+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:02:26+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:02:26+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:02:39+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:02:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:03:06+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:03:06+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:03:12+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:03:19+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:03:42+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:03:42+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:03:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:03:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:04:25+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:04:25+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:04:34+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:04:47+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:05:10+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:05:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:05:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:05:54+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:06:00+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:06:07+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:06:23+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:06:24+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:06:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:07:00+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:07:07+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:07:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:07:14+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:07:27+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:07:31+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:07:31+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:07:35+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:07:57+00:00  SKIP MSFT: daily loss limit hit — no new trades today
+2026-08-28T19:07:57+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:08:03+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:08:10+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:08:29+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:08:33+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:08:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:09:02+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:09:05+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:09:37+00:00  SKIP AMZN: daily loss limit hit — no new trades today
+2026-08-28T19:09:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:14:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:14:33+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:14:38+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:14:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:14:52+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:14:53+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:15:18+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:15:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:16:03+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:16:07+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:16:43+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:16:53+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:17:29+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:17:36+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:18:07+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:18:11+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:18:44+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:18:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:19:11+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:19:15+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:19:35+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:19:45+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:20:21+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:20:28+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:21:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:21:43+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:22:34+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:23:10+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:23:42+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:23:48+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:24:18+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:24:47+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:25:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:25:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:26:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:27:26+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:28:08+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:28:50+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:29:32+00:00  SKIP COIN: daily loss limit hit — no new trades today
+2026-08-28T19:29:39+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:30:11+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:30:51+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:31:37+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:32:21+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:32:41+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:33:29+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:34:17+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:34:55+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:35:31+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:36:10+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:36:51+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:37:11+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:37:32+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:37:52+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:38:27+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:39:02+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:39:25+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:40:07+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:40:49+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:41:25+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:42:01+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:42:30+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:43:20+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:43:59+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T19:44:22+00:00  SKIP HOOD: daily loss limit hit — no new trades today
+2026-08-28T22:48:41+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:09:57+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:34:22+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-08-30T18:34:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:34:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:34:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:35:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:35:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:35:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:35:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:36:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:36:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:36:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:36:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:37:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:37:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:37:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:37:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:38:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:38:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:38:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:38:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:39:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:39:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:39:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:39:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:40:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:40:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:40:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:40:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:41:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:41:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:41:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:41:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:42:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:42:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:42:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:42:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:43:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:43:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:43:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:43:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:44:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:44:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:44:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:44:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:45:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:45:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:45:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:45:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:46:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:46:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:46:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:46:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:47:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:47:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:47:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:47:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:48:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:48:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:48:38+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:48:53+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:49:08+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:49:23+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:49:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:49:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:50:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:50:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:50:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:50:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:51:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:51:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:51:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:51:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:52:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:52:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:52:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:52:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:53:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:53:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:53:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:53:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:54:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:54:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:54:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:54:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:55:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:55:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:55:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:55:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:56:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:56:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:56:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:56:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:57:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:57:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:57:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:57:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:58:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:58:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:58:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:58:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:59:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:59:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:59:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T18:59:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T19:00:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T19:00:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T19:00:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-08-30T19:00:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-10-08T16:03:12+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-10-08T16:03:12+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-10-08T16:03:12+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-10-08T16:03:30+00:00  BUY PUT COIN COIN261016P00175000 x1 @~$6.17 (score -0.25)
+2026-10-08T16:03:33+00:00  BUY PUT HOOD HOOD261016P00108000 x2 @~$3.35 (score -0.26)
+2026-10-08T16:04:08+00:00  SKIP AMD: one call costs $1,736, over the $728 premium cap
+2026-10-08T16:04:58+00:00  SKIP AMD: one call costs $1,732, over the $728 premium cap
+2026-10-08T16:05:38+00:00  SKIP AMD: one call costs $1,706, over the $728 premium cap
+2026-10-08T16:08:01+00:00  SKIP AMD: one call costs $1,687, over the $723 premium cap
+2026-10-08T16:08:40+00:00  CANCELLED unfilled option order HOOD261016P00108000
+2026-10-08T16:08:44+00:00  SKIP AMD: one call costs $1,738, over the $724 premium cap
+2026-10-08T16:09:22+00:00  BUY PUT HOOD HOOD261016P00108000 x2 @~$3.30 (score -0.24)
+2026-10-08T16:49:38+00:00  BUY CALL NVDA NVDA261016C00232500 x1 @~$4.90 (score +0.22)
+2026-10-08T16:49:42+00:00  SKIP AMD: max open positions reached
+2026-10-08T17:01:20+00:00  SKIP SPY: max open positions reached
+2026-10-08T17:01:54+00:00  SKIP SPY: max open positions reached
+2026-10-08T17:02:14+00:00  CLOSE NVDA261016C00232500 (fast-bleed cut (down -18% in 13m — cut small)) -18% on premium
+2026-10-08T17:02:23+00:00  BUY CALL SPY SPY261015C00772000 x1 @~$5.64 (score +0.22)
+2026-10-08T17:09:03+00:00  CLOSE HOOD261016P00108000 (trailing ratchet (peaked +23%, kept the floor)) +14% on premium
+2026-10-08T17:27:20+00:00  CLOSE SPY261015C00772000 (fast-bleed cut (down -18% in 25m — cut small)) -18% on premium
+2026-10-08T17:31:22+00:00  BUY PUT HOOD HOOD261016P00107000 x2 @~$3.38 (score -0.24)
+2026-10-08T17:31:59+00:00  SKIP MSFT: one call costs $880, over the $722 premium cap
+2026-10-08T17:33:30+00:00  SKIP MSFT: one call costs $884, over the $722 premium cap
+2026-10-08T17:34:25+00:00  SKIP MSFT: one call costs $872, over the $720 premium cap
+2026-10-08T17:35:12+00:00  SKIP MSFT: one call costs $862, over the $720 premium cap
+2026-10-08T17:35:56+00:00  SKIP MSFT: one call costs $860, over the $720 premium cap
+2026-10-08T17:36:31+00:00  SKIP MSFT: one call costs $846, over the $720 premium cap
+2026-10-08T17:37:13+00:00  SKIP MSFT: one call costs $848, over the $720 premium cap
+2026-10-08T17:37:55+00:00  SKIP MSFT: one call costs $841, over the $722 premium cap
+2026-10-08T17:38:42+00:00  SKIP MSFT: one call costs $838, over the $722 premium cap
+2026-10-08T17:39:43+00:00  SKIP MSFT: one call costs $852, over the $720 premium cap
+2026-10-08T17:40:19+00:00  SKIP MSFT: one call costs $872, over the $717 premium cap
+2026-10-08T17:41:09+00:00  SKIP MSFT: one call costs $865, over the $717 premium cap
+2026-10-08T17:41:56+00:00  SKIP MSFT: one call costs $848, over the $717 premium cap
+2026-10-08T17:42:58+00:00  SKIP MSFT: one call costs $832, over the $717 premium cap
+2026-10-08T17:43:41+00:00  SKIP MSFT: one call costs $1,104, over the $716 premium cap
+2026-10-08T17:44:24+00:00  SKIP MSFT: one call costs $782, over the $710 premium cap
+2026-10-08T17:45:12+00:00  SKIP MSFT: one call costs $804, over the $710 premium cap
+2026-10-08T17:45:55+00:00  SKIP MSFT: one call costs $818, over the $710 premium cap
+2026-10-08T17:46:55+00:00  SKIP MSFT: one call costs $794, over the $714 premium cap
+2026-10-08T18:01:15+00:00  SKIP MSFT: one call costs $825, over the $714 premium cap
+2026-10-08T18:01:19+00:00  BUY CALL AMZN AMZN261016C00255000 x1 @~$3.99 (score +0.23)
+2026-10-08T18:02:01+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:02:53+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:03:22+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:04:04+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:04:49+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:05:33+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:06:13+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:06:55+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:07:34+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:08:01+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:08:38+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:09:23+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:10:24+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:11:19+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:12:15+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:13:03+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:13:53+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:14:43+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:15:26+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:15:54+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:16:38+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:17:30+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:22:43+00:00  CLOSE COIN261016P00175000 (signal flipped) -3% on premium
+2026-10-08T18:31:35+00:00  SKIP MSFT: one call costs $796, over the $710 premium cap
+2026-10-08T18:32:32+00:00  SKIP MSFT: one call costs $803, over the $710 premium cap
+2026-10-08T18:33:25+00:00  SKIP MSFT: one call costs $787, over the $710 premium cap
+2026-10-08T18:33:58+00:00  SKIP MSFT: one call costs $790, over the $711 premium cap
+2026-10-08T18:34:47+00:00  SKIP MSFT: one call costs $798, over the $707 premium cap
+2026-10-08T18:35:43+00:00  SKIP MSFT: one call costs $776, over the $712 premium cap
+2026-10-08T18:36:29+00:00  SKIP MSFT: one call costs $770, over the $710 premium cap
+2026-10-08T18:37:07+00:00  SKIP MSFT: one call costs $742, over the $713 premium cap
+2026-10-08T18:38:08+00:00  SKIP MSFT: one call costs $733, over the $710 premium cap
+2026-10-08T18:38:50+00:00  SKIP MSFT: one call costs $727, over the $707 premium cap
+2026-10-08T18:39:13+00:00  BUY PUT F F261023P00012500 x14 @~$0.48 (score -0.23)
+2026-10-08T18:39:37+00:00  SKIP MSFT: max open positions reached
+2026-10-08T18:39:52+00:00  CLOSE AMZN261016C00255000 (trailing ratchet (peaked +15%, kept the floor)) +6% on premium
+2026-10-08T18:40:14+00:00  SKIP MSFT: one call costs $742, over the $697 premium cap
+2026-10-08T18:41:18+00:00  SKIP MSFT: one call costs $740, over the $699 premium cap
+2026-10-08T18:41:37+00:00  SKIP MSFT: one call costs $749, over the $699 premium cap
+2026-10-08T18:42:18+00:00  SKIP MSFT: one call costs $743, over the $697 premium cap
+2026-10-08T18:42:51+00:00  CLOSE HOOD261016P00107000 (signal flipped) -8% on premium
+2026-10-08T18:43:25+00:00  SKIP MSFT: one call costs $756, over the $699 premium cap
+2026-10-08T18:44:15+00:00  SKIP MSFT: one call costs $736, over the $699 premium cap
+2026-10-08T18:45:13+00:00  SKIP MSFT: one call costs $770, over the $699 premium cap
+2026-10-08T18:45:52+00:00  SKIP MSFT: one call costs $759, over the $699 premium cap
+2026-10-08T18:46:32+00:00  SKIP MSFT: one call costs $770, over the $699 premium cap
+2026-10-08T18:47:44+00:00  SKIP MSFT: one call costs $788, over the $699 premium cap
+2026-10-08T19:01:23+00:00  SKIP MSFT: one call costs $767, over the $696 premium cap
+2026-10-08T19:01:27+00:00  BUY CALL AMZN AMZN261016C00255000 x1 @~$4.13 (score +0.26)
+2026-10-08T19:01:59+00:00  SKIP MSFT: one call costs $768, over the $696 premium cap
+2026-10-08T19:02:58+00:00  SKIP MSFT: one call costs $781, over the $696 premium cap
+2026-10-08T19:03:42+00:00  SKIP MSFT: one call costs $783, over the $694 premium cap
+2026-10-08T19:04:31+00:00  SKIP MSFT: one call costs $754, over the $694 premium cap
+2026-10-08T19:05:29+00:00  SKIP MSFT: one call costs $750, over the $695 premium cap
+2026-10-08T19:06:23+00:00  SKIP MSFT: one call costs $736, over the $696 premium cap
+2026-10-08T19:07:20+00:00  SKIP MSFT: one call costs $743, over the $698 premium cap
+2026-10-08T19:07:41+00:00  CLOSE F261023P00012500 (signal flipped) -9% on premium
+2026-10-08T19:08:21+00:00  SKIP MSFT: one call costs $737, over the $700 premium cap
+2026-10-08T19:09:22+00:00  SKIP MSFT: one call costs $746, over the $700 premium cap
+2026-10-08T19:10:15+00:00  SKIP MSFT: one call costs $731, over the $699 premium cap
+2026-10-08T19:10:59+00:00  SKIP MSFT: one call costs $740, over the $699 premium cap
+2026-10-08T19:11:55+00:00  SKIP MSFT: one call costs $742, over the $699 premium cap
+2026-10-08T19:12:57+00:00  SKIP MSFT: one call costs $754, over the $699 premium cap
+2026-10-08T19:13:33+00:00  SKIP MSFT: one call costs $740, over the $704 premium cap
+2026-10-08T19:14:10+00:00  SKIP MSFT: one call costs $752, over the $703 premium cap
+2026-10-08T19:14:44+00:00  SKIP MSFT: one call costs $754, over the $704 premium cap
+2026-10-08T19:15:22+00:00  SKIP MSFT: one call costs $760, over the $704 premium cap
+2026-10-08T19:16:14+00:00  SKIP MSFT: one call costs $749, over the $702 premium cap
+2026-10-08T19:17:01+00:00  SKIP MSFT: one call costs $760, over the $702 premium cap
+2026-10-08T19:17:52+00:00  SKIP MSFT: one call costs $773, over the $704 premium cap
+2026-10-08T19:18:38+00:00  SKIP MSFT: one call costs $763, over the $703 premium cap
+2026-10-08T19:19:32+00:00  SKIP MSFT: one call costs $754, over the $702 premium cap
+2026-10-08T19:20:24+00:00  SKIP MSFT: one call costs $753, over the $702 premium cap
+2026-10-08T19:21:11+00:00  SKIP MSFT: one call costs $750, over the $701 premium cap
+2026-10-08T19:21:52+00:00  SKIP MSFT: one call costs $759, over the $704 premium cap
+2026-10-08T19:22:54+00:00  SKIP MSFT: one call costs $778, over the $703 premium cap
+2026-10-08T19:23:22+00:00  SKIP MSFT: one call costs $771, over the $704 premium cap
+2026-10-08T19:24:11+00:00  SKIP MSFT: one call costs $787, over the $704 premium cap
+2026-10-08T19:25:22+00:00  SKIP MSFT: one call costs $778, over the $705 premium cap
+2026-10-08T19:26:22+00:00  SKIP MSFT: one call costs $789, over the $703 premium cap
+2026-10-08T19:27:11+00:00  SKIP MSFT: one call costs $777, over the $704 premium cap
+2026-10-08T19:27:47+00:00  SKIP MSFT: one call costs $807, over the $704 premium cap
+2026-10-08T19:28:37+00:00  SKIP MSFT: one call costs $790, over the $702 premium cap
+2026-10-08T19:29:28+00:00  SKIP MSFT: one call costs $784, over the $701 premium cap
+2026-10-08T19:29:59+00:00  SKIP MSFT: one call costs $786, over the $701 premium cap
+2026-10-08T19:30:43+00:00  SKIP MSFT: one call costs $793, over the $701 premium cap
+2026-10-08T19:31:34+00:00  SKIP MSFT: one call costs $778, over the $700 premium cap
+2026-10-08T19:32:31+00:00  SKIP MSFT: one call costs $786, over the $699 premium cap
+2026-10-08T19:33:23+00:00  SKIP MSFT: one call costs $780, over the $699 premium cap
+2026-10-08T19:34:15+00:00  SKIP MSFT: one call costs $776, over the $701 premium cap
+2026-10-08T19:35:07+00:00  SKIP MSFT: one call costs $774, over the $701 premium cap
+2026-10-08T19:35:50+00:00  SKIP MSFT: one call costs $776, over the $703 premium cap
+2026-10-08T19:36:33+00:00  SKIP MSFT: one call costs $783, over the $703 premium cap
+2026-10-08T19:37:28+00:00  SKIP MSFT: one call costs $792, over the $703 premium cap
+2026-10-08T19:38:08+00:00  SKIP MSFT: one call costs $789, over the $703 premium cap
+2026-10-08T19:38:46+00:00  SKIP MSFT: one call costs $793, over the $703 premium cap
+2026-10-08T19:39:28+00:00  SKIP MSFT: one call costs $807, over the $703 premium cap
+2026-10-08T19:40:26+00:00  SKIP MSFT: one call costs $784, over the $704 premium cap
+2026-10-08T19:41:29+00:00  SKIP MSFT: one call costs $792, over the $705 premium cap
+2026-10-08T19:42:34+00:00  SKIP MSFT: one call costs $780, over the $705 premium cap
+2026-10-08T19:46:35+00:00  SKIP MSFT: one call costs $798, over the $703 premium cap
+2026-10-08T22:07:55+00:00  MODE: AUTO+FALLBACK — places real orders; if the broker rejects (unsettled funds), announces the trade for manual entry
+2026-10-08T22:07:55+00:00  OPTIONS engine started — PAPER, ML model brain, 20 underlyings, calls+puts, 7-21 DTE
+2026-10-08T22:07:55+00:00  Account: MARGIN (4x buying power). Day-trade limits do not apply — FINRA retired the PDT rule on 2026-06-04, so there is no 3-trades-per-week cap and no $25k minimum.
+2026-10-09T01:13:22+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-10-09T10:47:21+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-10-09T11:02:08+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-10-09T11:02:09+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-10-09T11:02:24+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-10-09T11:02:39+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-10-09T11:02:54+00:00  cycle error: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/account (Caused by NameResolutionError("HTTPSConnection(host='paper-api.alpaca.markets', port=443): Failed to resolve 'paper-api.alpaca.markets' ([Errno 11001] getaddrinfo failed)"))
+2026-10-09T12:09:56+00:00  cycle error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-10-09T13:34:31+00:00  CLOSE AMZN261016C00255000 (profit target) +50% on premium
+2026-10-09T14:01:05+00:00  BUY PUT HOOD HOOD261016P00107000 x2 @~$2.80 (score -0.22)
+2026-10-09T14:11:24+00:00  CLOSE HOOD261016P00107000 (fast-bleed cut (down -19% in 10m — cut small)) -19% on premium
+2026-10-09T15:31:32+00:00  MANUAL BUY: you clicked Buy PUT on F — skipping signal checks, sized by your normal premium cap
+2026-10-09T15:31:33+00:00  BUY PUT F F261030P00012000 x20 @~$0.35 (score +0.07)
+2026-10-09T15:37:03+00:00  CANCELLED unfilled option order F261030P00012000
+2026-10-09T15:38:53+00:00  MANUAL BUY: you clicked Buy CALL on AMZN — skipping signal checks, sized by your normal premium cap
+2026-10-09T15:38:56+00:00  BUY CALL AMZN AMZN261016C00260000 x1 @~$4.42 (score +0.15)
+2026-10-09T15:39:07+00:00  BUY PUT INTC INTC261016P00106000 x2 @~$3.04 (score -0.22)
+2026-10-09T15:42:34+00:00  MANUAL BUY: you clicked Buy PUT on TSLA — skipping signal checks, sized by your normal premium cap
+2026-10-09T15:42:38+00:00  SKIP TSLA: one put costs $798, over the $715 premium cap
+2026-10-09T15:46:07+00:00  BUY PUT HOOD HOOD261016P00109000 x2 @~$2.97 (score -0.22)

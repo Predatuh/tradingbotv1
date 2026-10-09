@@ -1,0 +1,127 @@
+{
+ "features": [
+  "ret_1",
+  "ret_3",
+  "ret_6",
+  "ret_12",
+  "ret_24",
+  "rsi",
+  "macd_hist",
+  "bb_pctb",
+  "vol_z",
+  "vol_trend",
+  "atr_ratio",
+  "ema_sep_fast",
+  "ema_sep_slow",
+  "ema_slope",
+  "donchian_pos",
+  "regime",
+  "hour_sin",
+  "hour_cos",
+  "dow"
+ ],
+ "n_rows": 237993,
+ "symbols": [
+  "AMD",
+  "BTC/USD",
+  "DOGE/USD",
+  "EEM",
+  "ETH/USD",
+  "GLD",
+  "LTC/USD",
+  "META",
+  "NVDA",
+  "QQQ",
+  "SPY",
+  "TLT",
+  "TSLA"
+ ],
+ "label_horizon": 12,
+ "importance": [
+  [
+   "ema_sep_slow",
+   0.0303
+  ],
+  [
+   "dow",
+   0.02932
+  ],
+  [
+   "atr_ratio",
+   0.01858
+  ],
+  [
+   "ema_sep_fast",
+   0.01741
+  ],
+  [
+   "hour_sin",
+   0.01647
+  ],
+  [
+   "hour_cos",
+   0.01147
+  ],
+  [
+   "vol_z",
+   0.0111
+  ],
+  [
+   "rsi",
+   0.00917
+  ],
+  [
+   "ema_slope",
+   0.00733
+  ],
+  [
+   "donchian_pos",
+   0.00708
+  ],
+  [
+   "vol_trend",
+   0.00682
+  ],
+  [
+   "macd_hist",
+   0.0066
+  ],
+  [
+   "ret_12",
+   0.00465
+  ],
+  [
+   "ret_6",
+   0.00463
+  ],
+  [
+   "bb_pctb",
+   0.00398
+  ],
+  [
+   "ret_3",
+   0.00302
+  ],
+  [
+   "ret_24",
+   0.00272
+  ],
+  [
+   "ret_1",
+   0.00175
+  ],
+  [
+   "regime",
+   0.00073
+  ]
+ ],
+ "trained_at": "2026-08-08T00:09:24.301315+00:00",
+ "walk_forward": {
+  "mean_auc": 0.5233544705917026,
+  "mean_edge": 0.030283173880875213,
+  "verdict": "MARGINAL",
+  "threshold": 0.58
+ },
+ "timeframe_minutes": 30,
+ "days": 730
+}

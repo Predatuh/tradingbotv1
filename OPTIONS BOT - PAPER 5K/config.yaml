@@ -1,0 +1,87 @@
+# ============================================================
+#  OPTIONS BOT — PAPER VERSION (fake money, $5k paper account)
+#  Same brain and watchlist as the live bot, sized for $5,000.
+#  This folder NEVER touches the real-money account.
+# ============================================================
+
+mode: paper            # fake money — leave this alone in this folder
+
+symbols:
+  stocks: [SPY, QQQ, IWM, NVDA, TSLA, AMD, META, AAPL, MSFT, AMZN, GOOGL, PLTR, COIN]
+  crypto: []           # no crypto options on Alpaca
+
+timeframe_minutes: 30
+loop_seconds: 15          # near-real-time checks — fastest safe speed for the API limit
+lookback_bars: 400
+
+strategy:
+  use_ml: auto
+  ml_entry_prob: 0.58
+  ml_exit_prob: 0.45
+  entry_threshold: 0.50
+  exit_threshold: -0.05
+  regime_filter: true
+  allow_shorts: true         # bearish signals buy PUTS
+  weights:
+    trend: 0.30
+    momentum: 0.20
+    mean_reversion: 0.15
+    volume: 0.15
+    volatility_regime: 0.10
+    breakout: 0.10
+
+# ---- Options-specific ----
+options:
+  # Same 20 liquid chains as the live bot — identical signals, so the paper
+  # account keeps training/proving the exact strategy the live bot runs.
+  underlyings: [SPY, QQQ, IWM, NVDA, TSLA, AMD, META, AAPL, MSFT, AMZN, GOOGL,
+                PLTR, COIN, INTC, SOFI, F, HOOD, MARA, RIVN, SNAP]
+  execution: auto          # paper orders always fill — the manual-signal
+                           # fallback exists but stays dormant here
+  call_score: 0.20
+  put_score: -0.20
+  dte_min: 7               # 7-21 days out, near-the-money — same discipline
+  dte_max: 21
+  close_dte: 2
+  max_premium_pct: 0.20    # $5k sizing: one trade's premium <= ~$1,000
+  profit_target_pct: 0.50
+  stop_pct: 0.33
+  max_spread_pct: 0.12
+  fast_bleed:
+    enabled: true
+    within_min: 25       # only in the first 25 min after entry
+    drop_pct: 0.18       # already down 18%+ and never went green -> cut it small now
+  # ---- bank-the-morning experiment ----
+  day_lock:
+    enabled: false       # off — bot trades all day; only late entries are blocked
+    arm_pct: 0.05        # day up 5% arms the lock
+    giveback_pct: 0.40   # give back 40% of the day's peak -> sell all, done for today
+    target_pct: 0.15     # or bank & stop at +15% on the day
+  entry_cutoff_utc: 0    # off — bot trades the full day (afternoon had the big winners too)
+
+risk:
+  max_positions_per_group: 2
+  correlation_groups:
+    index_etfs: [SPY, QQQ, IWM]
+    chips: [NVDA, AMD]
+    mega_tech: [AAPL, MSFT, META, AMZN, GOOGL, TSLA]
+    speculative: [PLTR, COIN]
+  equity_risk_per_trade: 0.06
+  max_position_pct: 0.10
+  max_open_positions: 3    # $5k has room for three positions at once
+  stop_loss_atr_mult: 3.0
+  take_profit_atr_mult: 5.0
+  trailing_stop: false
+  max_daily_loss_pct: 0.10
+  max_drawdown_pct: 0.35
+  cooldown_minutes_after_loss: 60
+
+scout:
+  enabled: false
+
+trade_stocks_extended_hours: false
+
+dashboard:
+  host: 127.0.0.1
+  port: 8054               # live options bot is on 8052 — both run side by side
+  name: "OPTIONS 5K V1"          # shown on the dashboard header

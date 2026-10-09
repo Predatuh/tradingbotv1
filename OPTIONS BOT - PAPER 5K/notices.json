@@ -1,0 +1,282 @@
+[
+ {
+  "ts": 1787926375,
+  "kind": "sell",
+  "symbol": "HOOD260904C00107000",
+  "title": "SOLD HOOD CALL $107 \u00b7 -19%",
+  "detail": "Went the wrong way almost immediately (-19% within 8 minutes of entry) \u2014 cut it small on purpose rather than riding a wrong-way trade deeper (in at $3.75, out at $3.05)."
+ },
+ {
+  "ts": 1787926445,
+  "kind": "sell",
+  "symbol": "MARA260904C00011000",
+  "title": "SOLD MARA CALL $11 \u00b7 -19%",
+  "detail": "Went the wrong way almost immediately (-19% within 12 minutes of entry) \u2014 cut it small on purpose rather than riding a wrong-way trade deeper (in at $0.61, out at $0.50)."
+ },
+ {
+  "ts": 1787927184,
+  "kind": "sell",
+  "symbol": "PLTR260904C00187500",
+  "title": "SOLD PLTR CALL $187.5 \u00b7 -33%",
+  "detail": "Premium fell 33% from entry \u2014 stop-loss sold at -33% to protect the account from a bigger hit (in at $4.94, out at $3.30)."
+ },
+ {
+  "ts": 1791475410,
+  "kind": "buy",
+  "symbol": "COIN261016P00175000",
+  "title": "BUYING COIN PUT $175 \u00b7 $6.17",
+  "detail": "1 contract at ~$6.17/share ($617 total), exp 2026-10-16. Signal score -0.25 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $4.13, take profit near $9.25. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791475413,
+  "kind": "buy",
+  "symbol": "HOOD261016P00108000",
+  "title": "BUYING HOOD PUT $108 \u00b7 $3.35",
+  "detail": "2 contracts at ~$3.35/share ($670 total), exp 2026-10-16. Signal score -0.26 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $2.24, take profit near $5.02. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791475563,
+  "kind": "buy",
+  "symbol": "COIN261016P00175000",
+  "title": "FILLED COIN PUT $175",
+  "detail": "The order filled \u2014 you now hold 1 contract(s) in at ~$6.17/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791475720,
+  "kind": "sell",
+  "symbol": "HOOD261016P00108000",
+  "title": "ORDER CANCELLED \u2014 HOOD never filled",
+  "detail": "The buy order sat ~5 minutes without filling (the price moved away), so it was cancelled. Nothing was bought, no money spent."
+ },
+ {
+  "ts": 1791475762,
+  "kind": "buy",
+  "symbol": "HOOD261016P00108000",
+  "title": "BUYING HOOD PUT $108 \u00b7 $3.30",
+  "detail": "2 contracts at ~$3.30/share ($660 total), exp 2026-10-16. Signal score -0.24 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $2.21, take profit near $4.95. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791475781,
+  "kind": "buy",
+  "symbol": "HOOD261016P00108000",
+  "title": "FILLED HOOD PUT $108",
+  "detail": "The order filled \u2014 you now hold 2 contract(s) in at ~$3.30/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791478178,
+  "kind": "buy",
+  "symbol": "NVDA261016C00232500",
+  "title": "BUYING NVDA CALL $232.5 \u00b7 $4.90",
+  "detail": "1 contract at ~$4.90/share ($490 total), exp 2026-10-16. Signal score +0.22 cleared the \u00b10.22 bar with the trend UP \u2014 exactly the setup it hunts for. Plan: bail near $3.29, take profit near $7.36. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791478220,
+  "kind": "buy",
+  "symbol": "NVDA261016C00232500",
+  "title": "FILLED NVDA CALL $232.5",
+  "detail": "The order filled \u2014 you now hold 1 contract(s) in at ~$4.90/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791478934,
+  "kind": "sell",
+  "symbol": "NVDA261016C00232500",
+  "title": "SOLD NVDA CALL $232.5 \u00b7 -18%",
+  "detail": "Went the wrong way almost immediately (-18% within 13 minutes of entry) \u2014 cut it small on purpose rather than riding a wrong-way trade deeper (in at $4.90, out at $4.00)."
+ },
+ {
+  "ts": 1791478943,
+  "kind": "buy",
+  "symbol": "SPY261015C00772000",
+  "title": "BUYING SPY CALL $772 \u00b7 $5.64",
+  "detail": "1 contract at ~$5.64/share ($564 total), exp 2026-10-15. Signal score +0.22 cleared the \u00b10.22 bar with the trend UP \u2014 exactly the setup it hunts for. Plan: bail near $3.78, take profit near $8.46. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791478998,
+  "kind": "buy",
+  "symbol": "SPY261015C00772000",
+  "title": "FILLED SPY CALL $772",
+  "detail": "The order filled \u2014 you now hold 1 contract(s) in at ~$5.64/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791479343,
+  "kind": "sell",
+  "symbol": "HOOD261016P00108000",
+  "title": "SOLD HOOD PUT $108 \u00b7 +14%",
+  "detail": "Rode a solid rise to +23%, then the premium started rolling over \u2014 the trailing ratchet sold to keep the gain instead of letting it bleed back: +14% banked (in at $3.30, out at $3.75)."
+ },
+ {
+  "ts": 1791480440,
+  "kind": "sell",
+  "symbol": "SPY261015C00772000",
+  "title": "SOLD SPY CALL $772 \u00b7 -18%",
+  "detail": "Went the wrong way almost immediately (-18% within 25 minutes of entry) \u2014 cut it small on purpose rather than riding a wrong-way trade deeper (in at $5.64, out at $4.61)."
+ },
+ {
+  "ts": 1791480682,
+  "kind": "buy",
+  "symbol": "HOOD261016P00107000",
+  "title": "BUYING HOOD PUT $107 \u00b7 $3.38",
+  "detail": "2 contracts at ~$3.38/share ($677 total), exp 2026-10-16. Signal score -0.24 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $2.27, take profit near $5.08. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791480758,
+  "kind": "buy",
+  "symbol": "HOOD261016P00107000",
+  "title": "FILLED HOOD PUT $107",
+  "detail": "The order filled \u2014 you now hold 2 contract(s) in at ~$3.38/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791482479,
+  "kind": "buy",
+  "symbol": "AMZN261016C00255000",
+  "title": "BUYING AMZN CALL $255 \u00b7 $3.99",
+  "detail": "1 contract at ~$3.99/share ($399 total), exp 2026-10-16. Signal score +0.23 cleared the \u00b10.22 bar with the trend UP \u2014 exactly the setup it hunts for. Plan: bail near $2.68, take profit near $5.99. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791482506,
+  "kind": "buy",
+  "symbol": "AMZN261016C00255000",
+  "title": "FILLED AMZN CALL $255",
+  "detail": "The order filled \u2014 you now hold 1 contract(s) in at ~$3.99/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791483763,
+  "kind": "sell",
+  "symbol": "COIN261016P00175000",
+  "title": "SOLD COIN PUT $175 \u00b7 -3%",
+  "detail": "Saw the signal flip against the position \u2014 momentum reversed, so it sold at -3% instead of hoping (in at $6.17, out at $6.00)."
+ },
+ {
+  "ts": 1791484753,
+  "kind": "buy",
+  "symbol": "F261023P00012500",
+  "title": "BUYING F PUT $12.5 \u00b7 $0.48",
+  "detail": "14 contracts at ~$0.48/share ($679 total), exp 2026-10-23. Signal score -0.23 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $0.32, take profit near $0.73. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791484772,
+  "kind": "buy",
+  "symbol": "F261023P00012500",
+  "title": "FILLED F PUT $12.5",
+  "detail": "The order filled \u2014 you now hold 14 contract(s) in at ~$0.48/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791484792,
+  "kind": "sell",
+  "symbol": "AMZN261016C00255000",
+  "title": "SOLD AMZN CALL $255 \u00b7 +6%",
+  "detail": "Rode a solid rise to +15%, then the premium started rolling over \u2014 the trailing ratchet sold to keep the gain instead of letting it bleed back: +6% banked (in at $3.99, out at $4.25)."
+ },
+ {
+  "ts": 1791484971,
+  "kind": "sell",
+  "symbol": "HOOD261016P00107000",
+  "title": "SOLD HOOD PUT $107 \u00b7 -8%",
+  "detail": "Saw the signal flip against the position \u2014 momentum reversed, so it sold at -8% instead of hoping (in at $3.38, out at $3.10)."
+ },
+ {
+  "ts": 1791486087,
+  "kind": "buy",
+  "symbol": "AMZN261016C00255000",
+  "title": "BUYING AMZN CALL $255 \u00b7 $4.13",
+  "detail": "1 contract at ~$4.13/share ($413 total), exp 2026-10-16. Signal score +0.26 cleared the \u00b10.22 bar with the trend UP \u2014 exactly the setup it hunts for. Plan: bail near $2.77, take profit near $6.20. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791486211,
+  "kind": "buy",
+  "symbol": "AMZN261016C00255000",
+  "title": "FILLED AMZN CALL $255",
+  "detail": "The order filled \u2014 you now hold 1 contract(s) in at ~$4.13/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791486461,
+  "kind": "sell",
+  "symbol": "F261023P00012500",
+  "title": "SOLD F PUT $12.5 \u00b7 -9%",
+  "detail": "Saw the signal flip against the position \u2014 momentum reversed, so it sold at -9% instead of hoping (in at $0.48, out at $0.44)."
+ },
+ {
+  "ts": 1791552871,
+  "kind": "sell",
+  "symbol": "AMZN261016C00255000",
+  "title": "SOLD AMZN CALL $255 \u00b7 +50%",
+  "detail": "Hit the +50% profit target \u2014 sold and took the win at +50% (in at $4.13, out at $6.20)."
+ },
+ {
+  "ts": 1791554465,
+  "kind": "buy",
+  "symbol": "HOOD261016P00107000",
+  "title": "BUYING HOOD PUT $107 \u00b7 $2.80",
+  "detail": "2 contracts at ~$2.80/share ($561 total), exp 2026-10-16. Signal score -0.22 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $1.88, take profit near $4.21. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791554478,
+  "kind": "buy",
+  "symbol": "HOOD261016P00107000",
+  "title": "FILLED HOOD PUT $107",
+  "detail": "The order filled \u2014 you now hold 2 contract(s) in at ~$2.80/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791555084,
+  "kind": "sell",
+  "symbol": "HOOD261016P00107000",
+  "title": "SOLD HOOD PUT $107 \u00b7 -19%",
+  "detail": "Went the wrong way almost immediately (-19% within 10 minutes of entry) \u2014 cut it small on purpose rather than riding a wrong-way trade deeper (in at $2.80, out at $2.26)."
+ },
+ {
+  "ts": 1791559893,
+  "kind": "buy",
+  "symbol": "F261030P00012000",
+  "title": "BUYING F PUT $12 \u00b7 $0.35",
+  "detail": "20 contracts at ~$0.35/share ($700 total), exp 2026-10-30. You tapped Buy on the app \u2014 signal checks skipped, sized by the normal premium cap. Plan: bail near $0.23, take profit near $0.52. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791560223,
+  "kind": "sell",
+  "symbol": "F261030P00012000",
+  "title": "ORDER CANCELLED \u2014 F never filled",
+  "detail": "The buy order sat ~5 minutes without filling (the price moved away), so it was cancelled. Nothing was bought, no money spent."
+ },
+ {
+  "ts": 1791560336,
+  "kind": "buy",
+  "symbol": "AMZN261016C00260000",
+  "title": "BUYING AMZN CALL $260 \u00b7 $4.42",
+  "detail": "1 contract at ~$4.42/share ($442 total), exp 2026-10-16. You tapped Buy on the app \u2014 signal checks skipped, sized by the normal premium cap. Plan: bail near $2.96, take profit near $6.64. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791560347,
+  "kind": "buy",
+  "symbol": "INTC261016P00106000",
+  "title": "BUYING INTC PUT $106 \u00b7 $3.04",
+  "detail": "2 contracts at ~$3.04/share ($609 total), exp 2026-10-16. Signal score -0.22 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $2.04, take profit near $4.57. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791560372,
+  "kind": "buy",
+  "symbol": "INTC261016P00106000",
+  "title": "FILLED INTC PUT $106",
+  "detail": "The order filled \u2014 you now hold 2 contract(s) in at ~$3.04/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791560430,
+  "kind": "buy",
+  "symbol": "AMZN261016C00260000",
+  "title": "FILLED AMZN CALL $260",
+  "detail": "The order filled \u2014 you now hold 1 contract(s) in at ~$4.42/share. It's live in Open positions now."
+ },
+ {
+  "ts": 1791560767,
+  "kind": "buy",
+  "symbol": "HOOD261016P00109000",
+  "title": "BUYING HOOD PUT $109 \u00b7 $2.97",
+  "detail": "2 contracts at ~$2.97/share ($594 total), exp 2026-10-16. Signal score -0.22 cleared the \u00b10.22 bar with the trend DOWN \u2014 exactly the setup it hunts for. Plan: bail near $1.99, take profit near $4.46. (Order placed \u2014 you'll get a FILLED or CANCELLED notice next.)"
+ },
+ {
+  "ts": 1791560789,
+  "kind": "buy",
+  "symbol": "HOOD261016P00109000",
+  "title": "FILLED HOOD PUT $109",
+  "detail": "The order filled \u2014 you now hold 2 contract(s) in at ~$2.97/share. It's live in Open positions now."
+ }
+]
