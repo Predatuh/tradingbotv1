@@ -386,13 +386,17 @@ function sigRow(sym, s, threshold, charts, isOpt, ctl, blocked, cands){
                     : `<div class="fill bear" style="width:${pct}%"></div>`;
   let word, wcls;
   const why = blocked && blocked[sym];
-  if (c >= threshold)      { word = why ? "WON'T BUY" : "BUYING A CALL"; wcls = why ? "wait" : "buy"; }
-  else if (c <= -threshold){ word = why ? "WON'T BUY" : "BUYING A PUT";  wcls = why ? "wait" : "sell"; }
-  else if (c >= threshold*0.7) { word = "warming up"; wcls = "wait"; }
-  else                     { word = "waiting";      wcls = "wait"; }
-  // when the score clears the bar but something stops the trade, say WHAT
+  // Side comes from the live hour (impulse), not the score. The score used
+  // to print "BUYING A PUT" while the order that went out was a call.
+  const impulse = s.impulse || 0;
+  if (why) { word = "WON'T BUY"; wcls = "wait"; }
+  else if (impulse > 0) { word = "BUYING A CALL"; wcls = "buy"; }
+  else if (impulse < 0) { word = "BUYING A PUT"; wcls = "sell"; }
+  else { word = "waiting"; wcls = "wait"; }
   const blockTxt = why ? ` <span class="sigword wait" style="color:var(--warning)">· ${why}</span>` : "";
-  const regime = (s.regime === -1 && !why) ? ` <span class="sigword wait" title="below its 200-bar average — bot won't buy">· in a downtrend</span>` : "";
+  const regime = impulse > 0 ? ` <span class="sigword buy">· live up</span>`
+               : impulse < 0 ? ` <span class="sigword sell">· live down</span>`
+               : ` <span class="sigword wait">· no live trend</span>`;
   const scout = s.parts?.scout
     ? ` <span class="sigword ${s.parts.scout>0?'buy':'sell'}" title="smart-money scout: insider filings + news">· smart-$ ${s.parts.scout>0?"+":""}${s.parts.scout.toFixed(2)}</span>` : "";
   // what one contract costs right now (watchlist pricing — you don't own it)
