@@ -679,6 +679,16 @@ class OptionsEngine:
             self.block[und] = f"no tradeable {direction} — spreads too wide right now"
             self._event(f"SKIP {und}: no tradeable {direction} (bad spreads or no chain)")
             return
+        # OCC letter is the real side. A put click must never submit a call symbol.
+        occ = (pick.symbol or "").upper()
+        occ_side = "call" if len(occ) >= 16 and occ[-9] == "C" else (
+            "put" if len(occ) >= 16 and occ[-9] == "P" else "")
+        if occ_side != direction:
+            self.block[und] = (f"refusing {pick.symbol}: you asked for a {direction}, "
+                               f"that symbol is a {occ_side or 'unknown'}")
+            self._event(f"SKIP {und}: asked for a {direction.upper()} but the chain "
+                        f"returned {pick.symbol} — not buying the wrong side")
+            return
         # IV GUARD: refuse premiums priced far above how the stock actually
         # moves — overpaying for volatility is a loss before the trade starts
         if self.iv_guard and not forced and hasattr(self.broker, "implied_vol"):
