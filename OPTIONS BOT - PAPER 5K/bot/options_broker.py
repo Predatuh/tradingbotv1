@@ -20,6 +20,24 @@ log = logging.getLogger("opt_broker")
 
 
 @dataclass
+
+def occ_side(symbol: str) -> str | None:
+    """Side encoded in an OCC symbol: the letter before the 8-digit strike.
+
+    F261030P00012000 is a put. NVDA261016C00232500 is a call. This is the
+    only check that matters — the request filter can be ignored by the API.
+    """
+    s = (symbol or "").strip().upper()
+    if len(s) < 16:
+        return None
+    letter = s[-9]
+    if letter == "C":
+        return "call"
+    if letter == "P":
+        return "put"
+    return None
+
+
 class ContractPick:
     symbol: str            # OCC symbol e.g. NVDA260918C00190000
     underlying: str
@@ -82,6 +100,10 @@ class OptionsBroker(AlpacaBroker):
             bid, ask = quote
             if bid <= 0 or ask <= 0:
                 continue
+            side = occ_side(c.symbol)
+            if side != direction:
+                log.info("skip %s: asked for a %s, contract is a %s", c.symbol, direction, side)
+                continue
             pick = ContractPick(symbol=c.symbol, underlying=underlying,
                                 type=direction, strike=float(c.strike_price),
                                 expiry=str(c.expiration_date), bid=bid, ask=ask)
@@ -124,7 +146,11 @@ class OptionsBroker(AlpacaBroker):
         if not q or q[0] <= 0 or q[1] <= 0:
             return None
         bid, ask = q
-        return {"symbol": best.symbol, "type": direction,
+        side = occ_side(best.symbol)
+        if side != direction:
+            log.info("peek skip %s: asked for a %s, contract is a %s", best.symbol, direction, side)
+            return None
+        return {"symbol": best.symbol, "type": side,
                 "strike": float(best.strike_price), "expiry": str(best.expiration_date),
                 "bid": round(bid, 4), "ask": round(ask, 4),
                 "mid": round((bid + ask) / 2, 4)}
@@ -189,6 +215,11 @@ class OptionsBroker(AlpacaBroker):
         """Limit buy at the midpoint plus a small nudge — never chase the ask."""
         if getattr(self, "observe_only", False):
             log.warning("OBSERVE ONLY: refused %s", "buy_option")
+            return None
+        side = occ_side(pick.symbol)
+        if side != pick.type:
+            self.last_error = f"refusing {pick.symbol}: asked for a {pick.type}, symbol is a {side}"
+            log.error(self.last_error)
             return None
         limit = round(pick.mid + 0.25 * (pick.ask - pick.mid), 2)
         self.last_error = None
